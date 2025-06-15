@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import { Github, ArrowUpRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -84,7 +85,7 @@ const About = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <img src="/lovable-uploads/be7c597a-6be9-4f98-98b9-8be3284f79a9.png" alt="A photo of Nikita" className="rounded-3xl object-cover aspect-[4/5] w-full grayscale" />
+            <img src="/lovable-uploads/8addd7fe-cb41-43cf-afb3-1ed5e3b543d7.png" alt="A photo of Nikita" className="rounded-3xl object-cover aspect-[4/5] w-full grayscale" />
           </motion.div>
         </div>
       </div>
