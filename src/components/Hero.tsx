@@ -3,19 +3,15 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Link as ScrollLink } from 'react-scroll';
 import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
-import LaptopScene from './LaptopScene';
 
 const Hero = () => {
   return (
-    <section id="hero" className="container relative flex flex-col items-center justify-center text-center min-h-screen py-24 overflow-hidden">
-      <div className="absolute inset-0 z-0 opacity-50">
-        <LaptopScene />
-      </div>
+    <section id="hero" className="container flex flex-col items-center justify-center text-center min-h-screen py-24">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="relative z-10 flex flex-col items-center"
+        className="flex flex-col items-center"
       >
         <h1 className="text-4xl font-bold tracking-tight text-primary sm:text-6xl lg:text-7xl font-display">
           Full-stack Developer
