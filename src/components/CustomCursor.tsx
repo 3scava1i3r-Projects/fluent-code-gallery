@@ -6,6 +6,7 @@ const CustomCursor = () => {
   const [position, setPosition] = useState({ x: -100, y: -100 });
   const [variant, setVariant] = useState('default');
   const [isTouchDevice, setIsTouchDevice] = useState(false);
+  const [isHidden, setIsHidden] = useState(true);
 
   useEffect(() => {
     if (typeof window !== 'undefined' && window.matchMedia('(pointer: coarse)').matches) {
@@ -15,6 +16,7 @@ const CustomCursor = () => {
 
     const onMouseMove = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
+      setIsHidden(false);
 
       const target = e.target as HTMLElement;
       if (target.closest('a, button')) {
@@ -26,10 +28,17 @@ const CustomCursor = () => {
       }
     };
 
-    document.addEventListener('mousemove', onMouseMove);
+    const onMouseLeave = () => setIsHidden(true);
+    const onMouseEnter = () => setIsHidden(false);
+
+    document.documentElement.addEventListener('mousemove', onMouseMove);
+    document.documentElement.addEventListener('mouseleave', onMouseLeave);
+    document.documentElement.addEventListener('mouseenter', onMouseEnter);
 
     return () => {
-      document.removeEventListener('mousemove', onMouseMove);
+      document.documentElement.removeEventListener('mousemove', onMouseMove);
+      document.documentElement.removeEventListener('mouseleave', onMouseLeave);
+      document.documentElement.removeEventListener('mouseenter', onMouseEnter);
     };
   }, []);
 
@@ -43,12 +52,16 @@ const CustomCursor = () => {
       width: 32,
       backgroundColor: 'hsla(var(--primary), 0)',
       border: '1px solid hsl(var(--primary))',
+      opacity: 1,
+      scale: 1,
     },
     link: {
       height: 64,
       width: 64,
       backgroundColor: 'hsla(var(--primary), 0.2)',
       border: '1px solid hsl(var(--primary))',
+      opacity: 1,
+      scale: 1,
     },
     image: {
       height: 80,
@@ -56,22 +69,42 @@ const CustomCursor = () => {
       backgroundColor: 'hsl(var(--primary))',
       mixBlendMode: 'difference',
       border: 'none',
+      opacity: 1,
+      scale: 1,
+    },
+    hidden: {
+      opacity: 0,
+      scale: 0.5,
     },
   };
 
   return (
-    <motion.div
-      className="fixed top-0 left-0 rounded-full pointer-events-none z-[9999]"
-      style={{
-        x: position.x,
-        y: position.y,
-        translateX: '-50%',
-        translateY: '-50%',
-      }}
-      variants={cursorVariants}
-      animate={variant}
-      transition={{ type: 'spring', stiffness: 500, damping: 30, mass: 0.5 }}
-    />
+    <>
+      <motion.div
+        className="fixed top-0 left-0 w-px h-screen bg-ring pointer-events-none z-[9998]"
+        style={{ x: position.x }}
+        animate={{ opacity: isHidden ? 0 : 0.3 }}
+        transition={{ type: 'spring', stiffness: 200, damping: 30, mass: 0.5 }}
+      />
+      <motion.div
+        className="fixed top-0 left-0 h-px w-screen bg-ring pointer-events-none z-[9998]"
+        style={{ y: position.y }}
+        animate={{ opacity: isHidden ? 0 : 0.3 }}
+        transition={{ type: 'spring', stiffness: 200, damping: 30, mass: 0.5 }}
+      />
+      <motion.div
+        className="fixed top-0 left-0 rounded-full pointer-events-none z-[9999]"
+        style={{
+          x: position.x,
+          y: position.y,
+          translateX: '-50%',
+          translateY: '-50%',
+        }}
+        variants={cursorVariants}
+        animate={isHidden ? 'hidden' : variant}
+        transition={{ type: 'spring', stiffness: 500, damping: 30, mass: 0.5 }}
+      />
+    </>
   );
 };
 
