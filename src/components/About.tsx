@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Github, ArrowUpRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -75,7 +74,7 @@ const About = () => {
         {/* Right Side: Intro + Image */}
         <div className="sticky top-28 space-y-8">
           <motion.p initial={{ opacity: 0, y: -20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }} className="text-2xl leading-relaxed text-primary">
-            Hello! I'm Nikita, I'm a <span className="font-bold">full-stack developer</span>.
+            Hello! I'm Hritwik, I'm a <span className="font-bold">full-stack developer</span>.
             <br />
             More than 5 years experience.
           </motion.p>
@@ -85,7 +84,7 @@ const About = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <img src="/lovable-uploads/8addd7fe-cb41-43cf-afb3-1ed5e3b543d7.png" alt="A photo of Nikita" className="rounded-3xl object-cover aspect-[4/5] w-full grayscale" />
+            <img src="/lovable-uploads/8addd7fe-cb41-43cf-afb3-1ed5e3b543d7.png" alt="A photo of Hritwik" className="rounded-3xl object-cover aspect-[4/5] w-full grayscale" />
           </motion.div>
         </div>
       </div>

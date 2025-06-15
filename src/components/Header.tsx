@@ -13,7 +13,7 @@ const Header = () => {
     <header className="w-full bg-background">
       <div className="container relative flex h-20 max-w-screen-2xl items-center justify-between">
         <Link to="hero" spy={true} smooth={true} duration={500} className="font-display text-lg font-bold cursor-pointer leading-tight">
-          Nikita<br />Khvatov
+          Hritwik<br />Tripathi
         </Link>
         
         <nav className="hidden absolute left-1/2 -translate-x-1/2 md:flex items-center space-x-6 text-sm font-medium">
