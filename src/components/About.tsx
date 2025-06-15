@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Github, ArrowUpRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -32,18 +31,18 @@ const About = () => {
       <div className="grid lg:grid-cols-[3fr,2fr] gap-x-16 gap-y-8 items-start">
         {/* Left Side: Skills */}
         <div className="space-y-6">
-          <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.1 }} viewport={{ once: true }} className="rounded-2xl border border-border/60 p-6 bg-card">
-            <h3 className="text-xl font-bold font-display mb-4">Front-end</h3>
-            <p className="text-muted-foreground leading-relaxed break-words">{skillCategories[0].skills.join(' / ')}</p>
+          <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.1 }} viewport={{ once: true }} className="rounded-2xl border border-border/60 p-6 bg-card transition-colors hover:bg-primary group">
+            <h3 className="text-xl font-bold font-display mb-4 group-hover:text-primary-foreground">Front-end</h3>
+            <p className="text-muted-foreground leading-relaxed break-words group-hover:text-primary-foreground">{skillCategories[0].skills.join(' / ')}</p>
           </motion.div>
 
           <div className="grid md:grid-cols-[1fr,auto] gap-6 items-center">
-            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }} className="rounded-2xl border border-border/60 p-6 bg-card">
-              <h3 className="text-xl font-bold font-display mb-4">Styles</h3>
-              <p className="text-muted-foreground leading-relaxed break-words">{skillCategories[1].skills.join(' / ')}</p>
+            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }} className="rounded-2xl border border-border/60 p-6 bg-card transition-colors hover:bg-primary group">
+              <h3 className="text-xl font-bold font-display mb-4 group-hover:text-primary-foreground">Styles</h3>
+              <p className="text-muted-foreground leading-relaxed break-words group-hover:text-primary-foreground">{skillCategories[1].skills.join(' / ')}</p>
             </motion.div>
             <motion.div initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, delay: 0.3 }} viewport={{ once: true }} className="flex items-center justify-center gap-4">
-              <Button asChild variant="outline" size="icon" className="w-16 h-16 rounded-full border-2 flex-shrink-0 hover:bg-accent/20 transition-colors">
+              <Button asChild variant="outline" size="icon" className="w-16 h-16 rounded-full border-2 flex-shrink-0 transition-colors">
                 <a href="https://github.com" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                   <Github className="w-7 h-7"/>
                 </a>
@@ -56,18 +55,18 @@ const About = () => {
             </motion.div>
           </div>
 
-          <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.4 }} viewport={{ once: true }} className="rounded-2xl border border-border/60 p-6 bg-card">
-            <h3 className="text-xl font-bold font-display mb-4">Back-end</h3>
-            <p className="text-muted-foreground leading-relaxed break-words">{skillCategories[2].skills.join(' / ')}</p>
+          <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.4 }} viewport={{ once: true }} className="rounded-2xl border border-border/60 p-6 bg-card transition-colors hover:bg-primary group">
+            <h3 className="text-xl font-bold font-display mb-4 group-hover:text-primary-foreground">Back-end</h3>
+            <p className="text-muted-foreground leading-relaxed break-words group-hover:text-primary-foreground">{skillCategories[2].skills.join(' / ')}</p>
           </motion.div>
           
           <div className="grid md:grid-cols-2 gap-6 items-end pt-4">
             <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.6 }} viewport={{ once: true }} className="text-muted-foreground italic">
               Some of my <span className="text-primary/80 not-italic font-semibold">favorite</span> technologies, topics, or tools that I worked with
             </motion.p>
-            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.5 }} viewport={{ once: true }} className="rounded-2xl border border-border/60 p-6 bg-card">
-              <h3 className="text-xl font-bold font-display mb-4">DevOps</h3>
-              <p className="text-muted-foreground leading-relaxed break-words">{skillCategories[3].skills.join(' / ')}</p>
+            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.5 }} viewport={{ once: true }} className="rounded-2xl border border-border/60 p-6 bg-card transition-colors hover:bg-primary group">
+              <h3 className="text-xl font-bold font-display mb-4 group-hover:text-primary-foreground">DevOps</h3>
+              <p className="text-muted-foreground leading-relaxed break-words group-hover:text-primary-foreground">{skillCategories[3].skills.join(' / ')}</p>
             </motion.div>
           </div>
         </div>
