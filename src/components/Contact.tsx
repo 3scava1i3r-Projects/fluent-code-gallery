@@ -1,12 +1,10 @@
 
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import BackgroundSketch from '@/components/BackgroundSketch';
 
 const Contact = () => {
   return (
     <section id="contact" className="container py-24 sm:py-32 relative overflow-hidden">
-      <BackgroundSketch />
        <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
