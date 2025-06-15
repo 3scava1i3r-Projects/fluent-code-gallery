@@ -6,7 +6,7 @@ function sketch(p: P5CanvasInstance) {
   let zoff = 0;
 
   p.setup = () => {
-    const parent = p.canvas.parentElement;
+    const parent = (p as any).canvas.parentElement;
     const width = parent ? parent.offsetWidth : p.windowWidth;
     const height = parent ? parent.offsetHeight : p.windowHeight;
     p.createCanvas(width, height);
@@ -31,7 +31,7 @@ function sketch(p: P5CanvasInstance) {
   };
 
   p.windowResized = () => {
-    const parent = p.canvas.parentElement;
+    const parent = (p as any).canvas.parentElement;
     const width = parent ? parent.offsetWidth : p.windowWidth;
     const height = parent ? parent.offsetHeight : p.windowHeight;
     p.resizeCanvas(width, height);

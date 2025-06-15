@@ -1,44 +1,44 @@
 
 import { Link } from 'react-scroll';
-import { Button } from '@/components/ui/button';
 
 const navLinks = [
   { to: 'about', label: 'About' },
   { to: 'projects', label: 'Projects' },
   { to: 'articles', label: 'Articles' },
-  { to: 'work', label: 'Work' },
-  { to: 'honors', label: 'Honors' },
-  { to: 'contact', label: 'Contact' },
+  { to: 'contact', label: 'Contacts' },
 ];
 
 const Header = () => {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 max-w-screen-2xl items-center justify-between">
-        <Link to="hero" spy={true} smooth={true} duration={500} className="font-display text-lg font-bold cursor-pointer">
-          Nikita Khvatov
+    <header className="w-full bg-background">
+      <div className="container relative flex h-20 max-w-screen-2xl items-center justify-between">
+        <Link to="hero" spy={true} smooth={true} duration={500} className="font-display text-lg font-bold cursor-pointer leading-tight">
+          Nikita<br />Khvatov
         </Link>
         
-        <div className="flex items-center gap-x-6">
-          <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.to}
-                  to={link.to}
-                  spy={true}
-                  smooth={true}
-                  offset={-80}
-                  duration={500}
-                  className="transition-colors hover:text-foreground/80 text-foreground/60 cursor-pointer"
-                  activeClass="text-foreground"
-                >
-                  {link.label}
-                </Link>
-              ))}
-          </nav>
+        <nav className="hidden absolute left-1/2 -translate-x-1/2 md:flex items-center space-x-6 text-sm font-medium">
+            {navLinks.map((link) => (
+              <Link
+                key={link.to}
+                to={link.to}
+                spy={true}
+                smooth={true}
+                offset={-80}
+                duration={500}
+                className="transition-colors hover:text-foreground/80 text-foreground/60 cursor-pointer"
+                activeClass="text-foreground"
+              >
+                {link.label}
+              </Link>
+            ))}
+        </nav>
 
-          <div className="hidden md:flex items-center">
-            <Button variant="outline" size="sm" className="text-xs">EN / GE</Button>
+        <div className="hidden md:flex items-center text-sm">
+           <div className="flex flex-col items-center font-medium leading-tight">
+            <button className="hover:text-foreground transition-colors">
+              <span className="underline decoration-from-font underline-offset-4">En</span>
+            </button>
+            <button className="text-foreground/60 hover:text-foreground transition-colors">Ge</button>
           </div>
         </div>
       </div>
