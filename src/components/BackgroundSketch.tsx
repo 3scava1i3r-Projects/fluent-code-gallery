@@ -2,81 +2,33 @@
 import React from 'react';
 import { ReactP5Wrapper, P5CanvasInstance } from '@p5-wrapper/react';
 
-class Particle {
-  p: P5CanvasInstance;
-  x: number;
-  y: number;
-  vx: number;
-  vy: number;
-  alpha: number;
-
-  constructor(p: P5CanvasInstance) {
-    this.p = p;
-    this.x = p.random(p.width);
-    this.y = p.random(p.height);
-    this.vx = p.random(-0.5, 0.5);
-    this.vy = p.random(-0.5, 0.5);
-    this.alpha = p.random(50, 150);
-  }
-
-  update() {
-    this.x += this.vx;
-    this.y += this.vy;
-
-    if (this.x < 0 || this.x > this.p.width) {
-      this.vx *= -1;
-    }
-    if (this.y < 0 || this.y > this.p.height) {
-      this.vy *= -1;
-    }
-  }
-
-  show() {
-    this.p.noStroke();
-    this.p.fill(255, 255, 255, this.alpha);
-    this.p.circle(this.x, this.y, 1.5);
-  }
-}
-
 function sketch(p: P5CanvasInstance) {
-  let particles: Particle[] = [];
-  
-  const setupParticles = () => {
-    const numParticles = Math.floor(p.width / 20);
-    particles = [];
-    for (let i = 0; i < numParticles; i++) {
-      particles.push(new Particle(p));
-    }
-  };
+  let zoff = 0;
 
   p.setup = () => {
     p.createCanvas(p.windowWidth, p.windowHeight);
-    setupParticles();
+    p.noStroke();
   };
 
   p.draw = () => {
     p.clear();
-    
-    for (const particle of particles) {
-      particle.update();
-      particle.show();
-    }
+    const step = 30; // Distance between dots
+    const noiseScale = 0.005; // Scale of noise
 
-    for (let i = 0; i < particles.length; i++) {
-      for (let j = i + 1; j < particles.length; j++) {
-        const d = p.dist(particles[i].x, particles[i].y, particles[j].x, particles[j].y);
-        if (d < 120) {
-          const alpha = p.map(d, 0, 120, 40, 0);
-          p.stroke(255, 255, 255, alpha);
-          p.line(particles[i].x, particles[i].y, particles[j].x, particles[j].y);
-        }
+    for (let y = 0; y < p.height; y += step) {
+      for (let x = 0; x < p.width; x += step) {
+        const noiseVal = p.noise(x * noiseScale, y * noiseScale, zoff);
+        const diameter = p.map(noiseVal, 0, 1, 0, 4);
+        p.fill(255, 255, 255, 100);
+        p.circle(x, y, diameter);
       }
     }
+
+    zoff += 0.002; // Animate the noise over time
   };
 
   p.windowResized = () => {
     p.resizeCanvas(p.windowWidth, p.windowHeight);
-    setupParticles();
   };
 }
 
