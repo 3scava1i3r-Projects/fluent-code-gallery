@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
@@ -80,18 +79,6 @@ const CustomCursor = () => {
 
   return (
     <>
-      <motion.div
-        className="fixed top-0 left-0 w-px h-screen bg-ring pointer-events-none z-[9998]"
-        style={{ x: position.x }}
-        animate={{ opacity: isHidden ? 0 : 0.3 }}
-        transition={{ type: 'spring', stiffness: 200, damping: 30, mass: 0.5 }}
-      />
-      <motion.div
-        className="fixed top-0 left-0 h-px w-screen bg-ring pointer-events-none z-[9998]"
-        style={{ y: position.y }}
-        animate={{ opacity: isHidden ? 0 : 0.3 }}
-        transition={{ type: 'spring', stiffness: 200, damping: 30, mass: 0.5 }}
-      />
       <motion.div
         className="fixed top-0 left-0 rounded-full pointer-events-none z-[9999]"
         style={{
