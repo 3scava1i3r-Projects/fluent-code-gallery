@@ -1,6 +1,7 @@
 
 import { Github, Linkedin, Youtube, ArrowUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link as ScrollLink } from 'react-scroll';
 
 const Footer = () => {
   return (
@@ -12,10 +13,12 @@ const Footer = () => {
           </p>
         </div>
         <div className="flex items-center gap-x-4">
-          <Button variant="outline" size="icon" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-            <ArrowUp className="h-4 w-4" />
-            <span className="sr-only">Go to top</span>
-          </Button>
+          <ScrollLink to="hero" smooth={true} duration={500}>
+            <Button variant="outline" size="icon">
+              <ArrowUp className="h-4 w-4" />
+              <span className="sr-only">Go to top</span>
+            </Button>
+          </ScrollLink>
           <a href="#" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Github /></a>
           <a href="#" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Linkedin /></a>
           <a href="#" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Youtube /></a>
