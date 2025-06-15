@@ -1,9 +1,9 @@
 
 import React, { useRef } from 'react';
-import { useFrame } from '@react-three/fiber';
+import { useFrame, GroupProps } from '@react-three/fiber';
 import * as THREE from 'three';
 
-const LaptopModel = (props: JSX.IntrinsicElements['group']) => {
+const LaptopModel = (props: GroupProps) => {
   const group = useRef<THREE.Group>(null!);
 
   useFrame((_state, delta) => {
