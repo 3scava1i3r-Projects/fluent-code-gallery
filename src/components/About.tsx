@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Github, ArrowUpRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import LaptopModel from './LaptopModel';
 
 const skillCategories = [
   {
@@ -84,7 +85,7 @@ const About = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <img src="/lovable-uploads/8addd7fe-cb41-43cf-afb3-1ed5e3b543d7.png" alt="A photo of Hritwik" className="rounded-3xl object-cover aspect-[4/5] w-full grayscale" />
+            <LaptopModel />
           </motion.div>
         </div>
       </div>
