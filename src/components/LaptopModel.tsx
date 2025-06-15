@@ -13,24 +13,29 @@ const LaptopModel = (props: GroupProps) => {
   });
 
   return (
-    <group ref={group} {...props} dispose={null}>
-      <group position={[0, -0.75, 0]}>
-        {/* Base */}
-        <mesh>
-          <boxGeometry args={[3, 0.1, 2]} />
-          <meshStandardMaterial color={'#444444'} />
-        </mesh>
-        {/* Screen */}
-        <mesh rotation={[1.3, 0, 0]} position={[0, 0.05, -0.9]}>
-          <boxGeometry args={[3, 1.8, 0.1]} />
-          <meshStandardMaterial color={'#222222'} />
-        </mesh>
-         {/* Screen Content */}
-         <mesh rotation={[1.3, 0, 0]} position={[0, 0.05, -0.89]}>
-          <planeGeometry args={[2.8, 1.6]} />
-          <meshStandardMaterial color={'#66aaff'} emissive={'#3388ff'} emissiveIntensity={1} />
-        </mesh>
-      </group>
+    <group ref={group} {...props}>
+      {/* --- Debug box to ensure scene works --- */}
+      {/* <mesh position={[0, 0, 0]}>
+        <boxGeometry args={[1, 1, 1]} />
+        <meshStandardMaterial color={'hotpink'} />
+      </mesh> */}
+
+      {/* Laptop base */}
+      <mesh position={[0, -0.8, 0]}>
+        <boxGeometry args={[3, 0.15, 2]} />
+        <meshStandardMaterial color={'#444'} />
+      </mesh>
+      {/* Laptop screen */}
+      <mesh rotation={[-1.2, 0, 0]} position={[0, 0.11, -0.9]}>
+        <boxGeometry args={[3, 1.8, 0.08]} />
+        <meshStandardMaterial color={'#222'} />
+      </mesh>
+      {/* Screen content (moved forward a bit to prevent z-fighting) */}
+      <mesh rotation={[-1.2, 0, 0]} position={[0, 0.13, -0.88]}>
+        <planeGeometry args={[2.7, 1.5]} />
+        <meshStandardMaterial color={'#66aaff'} emissive={'#3388ff'} emissiveIntensity={0.8} />
+      </mesh>
+      {/* Optional: add keyboard or touchpad here for more detail */}
     </group>
   );
 };
