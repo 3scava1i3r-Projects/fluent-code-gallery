@@ -3,10 +3,12 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Link as ScrollLink } from 'react-scroll';
 import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
+import BackgroundSketch from '@/components/BackgroundSketch';
 
 const Hero = () => {
   return (
-    <section id="hero" className="container flex flex-col items-center justify-center text-center min-h-screen py-24">
+    <section id="hero" className="container relative flex flex-col items-center justify-center text-center min-h-screen py-24 overflow-hidden">
+      <BackgroundSketch />
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

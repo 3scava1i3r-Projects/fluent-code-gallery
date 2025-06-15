@@ -6,7 +6,10 @@ function sketch(p: P5CanvasInstance) {
   let zoff = 0;
 
   p.setup = () => {
-    p.createCanvas(p.windowWidth, p.windowHeight);
+    const parent = p.canvas.parentElement;
+    const width = parent ? parent.offsetWidth : p.windowWidth;
+    const height = parent ? parent.offsetHeight : p.windowHeight;
+    p.createCanvas(width, height);
     p.noStroke();
   };
 
@@ -28,13 +31,16 @@ function sketch(p: P5CanvasInstance) {
   };
 
   p.windowResized = () => {
-    p.resizeCanvas(p.windowWidth, p.windowHeight);
+    const parent = p.canvas.parentElement;
+    const width = parent ? parent.offsetWidth : p.windowWidth;
+    const height = parent ? parent.offsetHeight : p.windowHeight;
+    p.resizeCanvas(width, height);
   };
 }
 
 const BackgroundSketch = () => {
   return (
-    <div style={{ position: 'fixed', top: 0, left: 0, zIndex: 0, width: '100vw', height: '100vh' }}>
+    <div className="absolute inset-0 -z-10">
       <ReactP5Wrapper sketch={sketch} />
     </div>
   );

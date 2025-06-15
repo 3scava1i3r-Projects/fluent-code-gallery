@@ -7,14 +7,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import CustomCursor from "@/components/CustomCursor";
-import BackgroundSketch from "@/components/BackgroundSketch";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <BackgroundSketch />
       <div style={{ position: 'relative', zIndex: 1 }}>
         <CustomCursor />
         <Toaster />
