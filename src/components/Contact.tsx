@@ -18,7 +18,7 @@ const Contact = () => {
         </p>
         <div className="mt-10">
           <Button size="lg" asChild>
-            <a href="mailto:hello@example.com">Say Hello</a>
+            <a href="https://cal.com/hritwikt" target="_blank" rel="noopener noreferrer">Say Hello</a>
           </Button>
         </div>
       </motion.div>
