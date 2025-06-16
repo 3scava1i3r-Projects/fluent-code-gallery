@@ -1,5 +1,5 @@
 
-import { Github, Linkedin, Youtube, ArrowUp } from 'lucide-react';
+import { Github, Linkedin, Mail, Twitter, ArrowUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link as ScrollLink } from 'react-scroll';
 
@@ -19,9 +19,10 @@ const Footer = () => {
               <span className="sr-only">Go to top</span>
             </Button>
           </ScrollLink>
-          <a href="#" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Github /></a>
-          <a href="#" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Linkedin /></a>
-          <a href="#" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Youtube /></a>
+          <a href="https://github.com/3scava1i3r" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Github /></a>
+          <a href="https://www.linkedin.com/in/hritwikt" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Linkedin /></a>
+          <a href="mailto:hritwikt@gmail.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Mail /></a>
+          <a href="https://twitter.com/0xHritwik" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Twitter /></a>
         </div>
       </div>
     </footer>

@@ -7,7 +7,12 @@ import path from "path";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   server: {
-    host: "::",
+        watch: {
+      usePolling: true,
+      interval: 100 // You can tweak this — lower = faster but more CPU
+    },
+    host: true, // required to access via Windows browser (optional)
+    // host: "::",
     port: 8080,
   },
   plugins: [

@@ -5,19 +5,19 @@ import { Button } from '@/components/ui/button';
 const skillCategories = [
   {
     title: 'Front-end',
-    skills: ['TypeScript', 'React', 'Vue', 'Vuex', 'Redux Toolkit', 'NextJs', 'Nuxt', 'Jest', 'GraphQL', 'React Native', 'Puppeteer', 'Enzyme'],
+    skills: ['TypeScript', 'React', 'Redux Toolkit', 'NextJs', 'Jest', 'React Native', 'SCSS', 'Daisy UI', 'Shadcn'],
   },
   {
-    title: 'Styles',
-    skills: ['SCSS', 'SASS', 'PostCSS', 'Ant.d', 'MUI', 'Material UI'],
+    title: 'Web3 and security',
+    skills: ['Solidity','Web3.js', 'Hardhat', 'Foundry', 'Ethers'],
   },
   {
     title: 'Back-end',
-    skills: ['Golang', 'Gin', 'GORM', 'PostgreSQL', 'MySQL', 'MongoDB', 'gRPC', 'Redis', 'Kafka', 'Node', 'Nest', 'TypeORM', 'Microservices'],
+    skills: ['Supabase', 'PostgreSQL', 'MySQL', 'MongoDB', 'Node', 'Microservices', 'Python', 'Flask', 'FastAPI', 'Express'],
   },
   {
-    title: 'DevOps',
-    skills: ['Nginx', 'Brotli', 'Docker', '(CI/CD)', 'k8s', 'Bash'],
+    title: 'AI and Automation',
+    skills: ['Ollama', 'n8n', 'LangChain', 'Python', 'REST APIs', 'Bash'],
   }
 ];
 
@@ -43,7 +43,7 @@ const About = () => {
             </motion.div>
             <motion.div initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, delay: 0.3 }} viewport={{ once: true }} className="flex items-center justify-center gap-4">
               <Button asChild variant="outline" size="icon" className="w-16 h-16 rounded-full border-2 flex-shrink-0 transition-colors">
-                <a href="https://github.com" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/3scava1i3r" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                   <Github className="w-7 h-7"/>
                 </a>
               </Button>
@@ -76,7 +76,7 @@ const About = () => {
           <motion.p initial={{ opacity: 0, y: -20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }} className="text-2xl leading-relaxed text-primary">
             Hello! I'm Hritwik, I'm a <span className="font-bold">full-stack developer</span>.
             <br />
-            More than 5 years experience.
+            More than 1 year experience.
           </motion.p>
           <motion.div 
             initial={{ opacity: 0, scale: 0.95, y: 20 }}

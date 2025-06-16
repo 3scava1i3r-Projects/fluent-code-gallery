@@ -1,10 +1,10 @@
-
 import { Link } from 'react-scroll';
 
 const navLinks = [
   { to: 'about', label: 'About' },
   { to: 'projects', label: 'Projects' },
   { to: 'articles', label: 'Articles' },
+  { to: 'honors', label: 'Honors' },
   { to: 'contact', label: 'Contacts' },
 ];
 
@@ -38,7 +38,28 @@ const Header = () => {
             <button className="hover:text-foreground transition-colors">
               <span className="underline decoration-from-font underline-offset-4">En</span>
             </button>
-            <button className="text-foreground/60 hover:text-foreground transition-colors">Ge</button>
+            
+            {/* START: "Hi" button with popover on the left */}
+            <div className="relative mt-1">
+              <button
+                disabled
+                className="text-foreground/40 cursor-not-allowed"
+              >
+                Hi
+              </button>
+
+              {/* The "Coming Soon" popover element */}
+              <div className="absolute right-full top-1/2 -translate-y-1/2 mr-2 flex items-center pointer-events-none">
+                {/* The text bubble */}
+                <div className="whitespace-nowrap rounded-md bg-muted px-2 py-1 text-xs font-semibold text-muted-foreground">
+                  Coming Soon
+                </div>
+                {/* The triangle pointer (pointing right) */}
+                <div className="h-2 w-2 bg-muted -ml-1 rotate-45" />
+              </div>
+
+            </div>
+            {/* END: Updated "Hi" button */}
           </div>
         </div>
       </div>
