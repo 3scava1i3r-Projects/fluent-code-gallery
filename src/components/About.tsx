@@ -48,7 +48,7 @@ const About = () => {
                 </a>
               </Button>
               <Button asChild variant="default" size="icon" className="w-16 h-16 rounded-full flex-shrink-0 bg-primary text-primary-foreground hover:bg-primary/90">
-                <a href="#" aria-label="External link" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/3scava1i3r/3scava1i3r" aria-label="External link" target="_blank" rel="noopener noreferrer">
                   <ArrowUpRight className="w-7 h-7"/>
                 </a>
               </Button>
