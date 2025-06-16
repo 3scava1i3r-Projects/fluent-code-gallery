@@ -53,6 +53,10 @@ const Articles = () => {
     currentPage * articlesPerPage
   );
 
+  // Determine if the last page is the current one and if it's not full
+  const isLastPageIncomplete =
+    currentPage === totalPages && articles.length % articlesPerPage !== 0;
+
   const handlePageChange = (page: number) => {
     if (page >= 1 && page <= totalPages) {
       setCurrentPage(page);
@@ -162,6 +166,33 @@ const Articles = () => {
                     </CardFooter>
                   </Card>
                 ))}
+                
+                {/* START: Added "Read More" card */}
+                {isLastPageIncomplete && (
+                  <Card
+                    className="flex flex-col justify-center items-center text-center p-6 border-border/60 hover:border-primary/40 transition-colors duration-300 bg-card"
+                  >
+                    <CardHeader>
+                      <CardTitle className="font-display text-xl leading-tight">
+                        Explore More Articles
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex-grow flex items-center">
+                       <p className="text-muted-foreground text-sm">
+                        For more of my work, please visit my Medium profile.
+                      </p>
+                    </CardContent>
+                    <CardFooter className="pt-6">
+                      <Button asChild className="rounded-full" variant="default">
+                        <a href="https://medium.com/@joichiro.sai" target="_blank" rel="noopener noreferrer">
+                          Read on Medium
+                          <ArrowRight className="h-4 w-4 ml-2" />
+                        </a>
+                      </Button>
+                    </CardFooter>
+                  </Card>
+                )}
+                {/* END: Added "Read More" card */}
               </div>
             )}
           </div>
