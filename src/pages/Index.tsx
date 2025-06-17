@@ -8,6 +8,7 @@ import Footer from '@/components/Footer';
 import Articles from '@/components/Articles';
 import Work from '@/components/Work';
 import Honors from '@/components/Honors';
+import { PhotographySection } from '@/components/PhotographySection';
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
         <Articles />
         <Work />
         <Honors />
+        <PhotographySection />
         <Contact />
       </main>
       <Footer />

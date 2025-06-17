@@ -22,12 +22,19 @@ const projectData = [
     live: '#',
   },
   {
-    title: 'Decentralized Application (Web3)',
-    description: 'Built a full-stack decentralized application on the Ethereum blockchain, featuring smart contract interactions and a Web3-integrated frontend.',
-    tags: ['Ethereum', 'Hardhat', 'TypeScript', 'Web3.js'],
-    github: 'https://github.com/3scava1i3r', // Note: Update with specific repo link if available
-    live: '#',
+    title: 'Debris – Random Sprite Generator',
+    description: 'A lightweight Vite-powered web app that generates random sprites using pixel art logic. Ideal for game developers and NFT creators seeking unique visual assets.',
+    tags: ['Vite', 'JavaScript', 'Canvas', 'Creative Coding', 'Frontend'],
+    github: 'https://github.com/3scava1i3r-projects/debris', // Update if your repo name is different
+    live: 'https://debris-sprite.netlify.app/', // Replace with your live link if hosted
   },
+  {
+    title: 'Issue Prioritizer – AI-Driven Task Scoring',
+    description: 'An AI-powered tool that analyzes GitHub issues and ranks them based on urgency, impact, and complexity. Designed for busy dev teams to focus on what matters most, faster.',
+    tags: ['AI', 'GitHub API', 'OpenAI', 'Node.js', 'Automation', 'DevTool'],
+    github: 'https://github.com/3scava1i3r/Berry', // Adjust to match your actual repo URL
+    live: 'https://berry-san.netlify.app', // Add Netlify/Vercel/Render URL if deployed
+  }
 ];
 
 const Projects = () => {

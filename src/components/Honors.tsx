@@ -4,6 +4,12 @@ import { Award } from 'lucide-react';
 
 const internationalHonors = [
   {
+    year: '2024',
+    name: 'Top 16 Auditor (16/231)',
+    org: 'Cork Protocol Security Audit Contest',
+    desc: 'Ranked in the top 16 out of 231 participants for outstanding performance in identifying vulnerabilities and analyzing smart contract security during the Cork Protocol audit competition.',
+  },
+  {
     year: '2021',
     name: 'Fellowship Awardee',
     org: 'Ethereum India Fellowship 2.0',
@@ -106,7 +112,7 @@ const Honors = () => {
                   className="flex items-start gap-x-6"
                 >
                   <div className="p-2 rounded-full bg-accent/20 border border-accent/50">
-                    <Award className="h-6 w-6 text-accent-foreground" />
+                    <Award className="h-6 w-6" />
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-muted-foreground">{honor.year} - {honor.org}</p>

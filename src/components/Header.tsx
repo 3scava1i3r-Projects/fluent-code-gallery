@@ -5,6 +5,7 @@ const navLinks = [
   { to: 'projects', label: 'Projects' },
   { to: 'articles', label: 'Articles' },
   { to: 'honors', label: 'Honors' },
+  { to: 'photography', label: 'Photography' }, // <-- ADDED THIS LINE
   { to: 'contact', label: 'Contacts' },
 ];
 
