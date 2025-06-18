@@ -5,11 +5,11 @@ import { Button } from '@/components/ui/button';
 const skillCategories = [
   {
     title: 'Front-end',
-    skills: ['TypeScript', 'React', 'Redux Toolkit', 'NextJs', 'Jest', 'React Native', 'SCSS', 'Daisy UI', 'Shadcn'],
+    skills: ['TypeScript', 'React', 'Redux Toolkit', 'NextJs', 'Vite', 'Jest', 'React Native', 'SCSS', 'Daisy UI', 'Shadcn'],
   },
   {
     title: 'Web3 and security',
-    skills: ['Solidity','Web3.js', 'Hardhat', 'Foundry', 'Ethers'],
+    skills: ['Solidity', 'Web3.js', 'Hardhat', 'Foundry', 'Ethers'],
   },
   {
     title: 'Back-end',
@@ -17,7 +17,7 @@ const skillCategories = [
   },
   {
     title: 'AI and Automation',
-    skills: ['Ollama', 'n8n', 'LangChain', 'Python', 'REST APIs', 'Bash'],
+    skills: ['Ollama', 'n8n', 'Python', 'REST APIs', 'Bash'],
   }
 ];
 
@@ -38,7 +38,7 @@ const About = () => {
 
           <div className="grid md:grid-cols-[1fr,auto] gap-6 items-center">
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.2 }} viewport={{ once: true }} className="rounded-2xl border border-border/60 p-6 bg-card transition-colors hover:bg-primary group">
-              <h3 className="text-xl font-bold font-display mb-4 group-hover:text-primary-foreground">Styles</h3>
+              <h3 className="text-xl font-bold font-display mb-4 group-hover:text-primary-foreground">Web3 and Security</h3>
               <p className="text-muted-foreground leading-relaxed break-words group-hover:text-primary-foreground">{skillCategories[1].skills.join(' / ')}</p>
             </motion.div>
             <motion.div initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, delay: 0.3 }} viewport={{ once: true }} className="flex items-center justify-center gap-4">
@@ -65,7 +65,7 @@ const About = () => {
               Some of my <span className="text-primary/80 not-italic font-semibold">favorite</span> technologies, topics, or tools that I worked with
             </motion.p>
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.5 }} viewport={{ once: true }} className="rounded-2xl border border-border/60 p-6 bg-card transition-colors hover:bg-primary group">
-              <h3 className="text-xl font-bold font-display mb-4 group-hover:text-primary-foreground">DevOps</h3>
+              <h3 className="text-xl font-bold font-display mb-4 group-hover:text-primary-foreground">AI and Automation</h3>
               <p className="text-muted-foreground leading-relaxed break-words group-hover:text-primary-foreground">{skillCategories[3].skills.join(' / ')}</p>
             </motion.div>
           </div>

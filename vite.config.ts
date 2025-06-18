@@ -7,7 +7,7 @@ import path from "path";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   server: {
-        watch: {
+      watch: {
       usePolling: true,
       interval: 100 // You can tweak this — lower = faster but more CPU
     },

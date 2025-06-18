@@ -115,7 +115,7 @@ import { PerlinNoiseBackground } from '@/components/ui/perlin-noise-background';
 const socialLinks = [
   { name: 'Github', icon: <Github className="h-4 w-4" />, href: 'https://github.com/3scava1i3r' },
   { name: 'LinkedIn', icon: <Linkedin className="h-4 w-4" />, href: 'https://www.linkedin.com/in/hritwikt' },
-  {name: 'Email', icon: <Mail className="h-4 w-4" />, href: 'mailto:hritwikt@gmail.com'},
+  {name: 'Email', icon: <Mail className="h-4 w-4" />, href: 'mailto:tripathi.hritwik@gmail.com'},
   { name: 'Twitter', icon: <Twitter className="h-4 w-4" />, href: 'https://twitter.com/0xHritwik' },
   // { name: 'Facebook', icon: <Facebook className="h-4 w-4" />, href: '#' },
   // { name: 'Instagram', icon: <Instagram className="h-4 w-4" />, href: '#' },

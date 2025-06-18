@@ -21,7 +21,7 @@ const Footer = () => {
           </ScrollLink>
           <a href="https://github.com/3scava1i3r" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Github /></a>
           <a href="https://www.linkedin.com/in/hritwikt" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Linkedin /></a>
-          <a href="mailto:hritwikt@gmail.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Mail /></a>
+          <a href="mailto:tripathi.hritwik@gmail.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Mail /></a>
           <a href="https://twitter.com/0xHritwik" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Twitter /></a>
         </div>
       </div>
