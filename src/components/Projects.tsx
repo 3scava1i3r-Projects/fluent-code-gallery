@@ -34,6 +34,13 @@ const projectData = [
     tags: ['AI', 'GitHub API', 'OpenAI', 'Node.js', 'Automation', 'DevTool'],
     github: 'https://github.com/3scava1i3r/Berry', // Adjust to match your actual repo URL
     live: 'https://berry-san.netlify.app', // Add Netlify/Vercel/Render URL if deployed
+  },
+  {
+    title: 'Innoviksha Website',
+    description: 'Official website of Innoviksha, crafted using Vite.js with a fast, responsive design and modern developer experience at its core.',
+    tags: ['Vite', 'Frontend', 'Web Design', 'Performance'],
+    github: 'https://github.com/3scava1i3r', // Update with the actual repo if available
+    live: 'https://innoviksha.xyz',
   }
 ];
 
