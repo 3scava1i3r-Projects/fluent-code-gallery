@@ -255,7 +255,56 @@ const staticPins = [
     link: 'https://in.pinterest.com/pin/678073287685200276/',
     title: 'Step into a world where serene greenery blends effortlessly with striking urban design. This peaceful cityscape features charming red brick pathways...',
     imageUrl: 'https://i.pinimg.com/236x/96/fb/c6/96fbc63010f72eaaa2eb1bccad2daa53.jpg'
+  },
+    {
+    guid: 'https://in.pinterest.com/pin/678073287686238696/',
+    link: 'https://in.pinterest.com/pin/678073287686238696/',
+    title: 'Escape into tranquility with this sun - drenched street, where lush trees and vibrant blooms transform the city into a peaceful retreat 🌞. Whether you’re taking a mindful stroll, snapping a scenic shot for your Snapchat story, or simply soaking in nature’s beauty, let this urban haven recharge your day. Ideal for summer walks, local adventures, or sharing serene vibes online. Find joy in the everyday and capture moments worth snapping. ✨ #TropicalVibes #StreetPhotography #NatureAesthetic #TravelGoals #UrbanJungle #Snap #Snapchat',
+    imageUrl: 'https://i.pinimg.com/236x/e8/ff/2a/e8ff2a61773bc27728f264ad0203cc5d.jpg'
+  },
+  {
+    guid: 'https://in.pinterest.com/pin/678073287686238691/',
+    link: 'https://in.pinterest.com/pin/678073287686238691/',
+    title: 'Escape to a serene tropical paradise with this charming scene of palm trees, warm sunlight, and a cozy neighborhood vibe. The perfect blend of nature and urban life makes this spot feel like a slice of paradise right in the city! #TropicalVibes #PalmTrees #UrbanNature #SunnyDays #RelaxationSpot #SnapChat #Snap',
+    imageUrl: 'https://i.pinimg.com/236x/64/60/a9/6460a96c404c64a8a34e36b07748d8cd.jpg'
+  },
+  {
+    guid: 'https://in.pinterest.com/pin/678073287686238661/',
+    link: 'https://in.pinterest.com/pin/678073287686238661/',
+    title: 'Discover the beauty of city living with a touch of nature! This serene home, nestled among lush green trees, is the perfect blend of urban architecture and natural tranquility. Whether you love home design, cozy spaces, or city aesthetics, this pin is sure to inspire your next dream home vision. Save it, share it, or snap it for your Snapchat story! Hashtags: #HomeInspiration #UrbanJungle #CityLiving #HouseGoals #NatureLovers #DreamHome #ArchitectureLovers #CozyVibes #Greenery #HomeDecor #AestheticHomes #PinterestFinds #InstaHome #Snap #Snapchat #HomeDesign #TreehouseVibes #ModernLiving #PeacefulPlaces #HomeSweetHome #TrendingNow',
+    imageUrl: 'https://i.pinimg.com/236x/8f/ae/da/8faeda52b5976bab57b365417c6b842d.jpg'
+  },
+  {
+    guid: 'https://in.pinterest.com/pin/678073287686238667/',
+    link: 'https://in.pinterest.com/pin/678073287686238667/',
+    title: 'Description: Talk about finding a hidden gem! 🌿 This tranquil view, blending stunning historical architecture with a peaceful lakeside landscape, is pure travel inspiration. The intricate stonework of this traditional pavilion (chhatri) offers the perfect spot to pause and soak in the serenity. Dreaming of exploring incredible India? Add this vibe to your "Travel Bucket List," "Wanderlust Dreams," or "Beautiful Destinations" boards! Hashtags: #IndiaTravel #Rajasthan #IncredibleIndia #TravelGoals #Wanderlust #BucketList #Aesthetic #TravelPhotography #ArchitectureLovers #HiddenGem #Serenity #VacationMode #Explore #BeautifulDestinations #InstaTravel #History #Culture #PhotoOfTheDay #TravelInspo #Vibes #snap #snapchat',
+    imageUrl: 'https://i.pinimg.com/236x/00/d4/5d/00d45dea0721e68245a773178d87a890.jpg'
+  },
+  {
+    guid: 'https://in.pinterest.com/pin/678073287686238669/',
+    link: 'https://in.pinterest.com/pin/678073287686238669/',
+    title: 'Wander down this quiet country lane and lose yourself in the drama of a lone palm tree stretching toward a brooding sky. The muted greens of the roadside merge with silvery clouds to create a scene that’s equal parts serene and cinematic. Pin this image if you crave moody landscapes, dreamy road-trip vibes, or just a moment of peaceful escape. Hashtags: #palmtrees #cloudyskies #moodygrams #wanderlust #landscapephotography #naturephotography #roadtrip #ruralroads #exploremore #skyporn #earthpix #visualsoflife #adventureseeker #travelgram #outdoorvibes #picoftheday #moodytones #snap #snapchat #instatravel',
+    imageUrl: 'https://i.pinimg.com/236x/dc/20/69/dc206984d5e33da40f4b1c612b0d0cde.jpg'
+  },
+  {
+    guid: 'https://in.pinterest.com/pin/678073287686238671/',
+    link: 'https://in.pinterest.com/pin/678073287686238671/',
+    title: 'Description: Step back in time and peer through this intriguing stone window. Where do you think this secret passage leads? Explore historical mysteries and hidden architectural wonders. Share your thoughts! #HistoricalMystery #AncientArchitecture #TravelSecrets Hashtags: #HistoricalMystery #AncientArchitecture #TravelSecrets #HiddenGems #Explore #Travel #Wanderlust #ArchitecturePhotography #HistoryLovers #AncientHistory #Travelgram #InstaTravel #Discover #AdventureTime #TravelInspiration #Photography #Vintage #snap #snapchat #SecretPlaces',
+    imageUrl: 'https://i.pinimg.com/236x/7a/f9/25/7af925aafeb3bd814cc8c1383b6e5c81.jpg'
+  },
+  {
+    guid: 'https://in.pinterest.com/pin/678073287686238681/',
+    link: 'https://in.pinterest.com/pin/678073287686238681/',
+    title: 'Find peace in simplicity with this calming sky and leafy branch photo. Perfect for anyone who loves minimalism, nature, and tranquil vibes. Let this serene scene inspire your next mood board, phone wallpaper, or creative project. Save it for daily inspiration and a touch of calm in your feed! Hashtags: #Aesthetic #NatureLovers #Minimalism #SkyLovers #Serene #CalmVibes #NaturePhotography #Inspiration #Tranquility #Leafy #BlueSky #Peaceful #OutdoorVibes #PhotoOfTheDay #Snap #Snapchat #Trendy #PinterestFinds #FreshAir #MoodBoard #SimpleBeauty',
+    imageUrl: 'https://i.pinimg.com/236x/41/85/28/418528f28e33352831747415078e2e7f.jpg'
+  },
+  {
+    guid: 'https://in.pinterest.com/pin/678073287686238683/',
+    link: 'https://in.pinterest.com/pin/678073287686238683/',
+    title: 'Capture the calm and mysterious energy of midnight with this moody aesthetic window shot. Perfect for anyone who loves late-night vibes, minimalism, and dreamy inspiration. Let this photo set the tone for your next creative project or mood board. Save it for your aesthetic, photography, or inspiration boards! Hashtags: #Mood #Aesthetic #NightVibes #Midnight #WindowView #Minimalism #Dreamy #Inspiration #Photography #Vibes #Moody #HomeDecor #InteriorDesign #Snap #Snapchat #PhotoOfTheDay #Trendy #ChillVibes #Artistic #PinterestFinds #LateNight',
+    imageUrl: 'https://i.pinimg.com/236x/82/53/a6/8253a6fc9c9e84c73b547b524aff9945.jpg'
   }
+
 ];
 const TITLE_MAX_LENGTH = 45;
 const ITEMS_PER_PAGE = 4;
