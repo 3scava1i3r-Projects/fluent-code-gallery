@@ -6,7 +6,7 @@ const navLinks = [
   { to: 'articles', label: 'Articles' },
   { to: 'honors', label: 'Honors' },
   { to: 'photography', label: 'Photography' }, // <-- ADDED THIS LINE
-  { to: 'contact', label: 'Contacts' },
+  { to: 'contact', label: 'Contact Me' },
 ];
 
 const Header = () => {
