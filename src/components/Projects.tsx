@@ -14,13 +14,13 @@ const projectData = [
     github: 'https://github.com/3scava1i3r', // Note: Update with specific repo link if available
     live: '#',
   },
-  {
-    title: 'Brain Tumor Detection (CNN)',
-    description: 'Developed a Convolutional Neural Network algorithm to analyze MRI images, achieving 96% accuracy in identifying brain tumors.',
-    tags: ['Python', 'TensorFlow', 'Keras', 'AI/ML'],
-    github: 'https://github.com/3scava1i3r', // Note: Update with specific repo link if available
-    live: '#',
-  },
+  // {
+  //   title: 'Brain Tumor Detection (CNN)',
+  //   description: 'Developed a Convolutional Neural Network algorithm to analyze MRI images, achieving 96% accuracy in identifying brain tumors.',
+  //   tags: ['Python', 'TensorFlow', 'Keras', 'AI/ML'],
+  //   github: 'https://github.com/3scava1i3r', // Note: Update with specific repo link if available
+  //   live: '#',
+  // },
   {
     title: 'Debris – Random Sprite Generator',
     description: 'A lightweight Vite-powered web app that generates random sprites using pixel art logic. Ideal for game developers and NFT creators seeking unique visual assets.',
