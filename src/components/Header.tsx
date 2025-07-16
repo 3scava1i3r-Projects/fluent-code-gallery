@@ -5,8 +5,9 @@ const navLinks = [
   { to: 'projects', label: 'Projects' },
   { to: 'articles', label: 'Articles' },
   { to: 'honors', label: 'Honors' },
-  { to: 'photography', label: 'Photography' }, // <-- ADDED THIS LINE
+  { to: 'photography', label: 'Photography' },
   { to: 'contact', label: 'Contact Me' },
+  { to: 'https://www.linkedin.com/in/hritwikt/overlay/1752658408744/single-media-viewer/?type=DOCUMENT&profileId=ACoAAC4FJY8BMWWEcb2-38PtlTOEDCYOOqVc0iQ', label: 'Resume', external: true }, 
 ];
 
 const Header = () => {
