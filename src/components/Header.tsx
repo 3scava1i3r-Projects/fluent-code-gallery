@@ -20,18 +20,41 @@ const Header = () => {
         
         <nav className="hidden absolute left-1/2 -translate-x-1/2 md:flex items-center space-x-6 text-sm font-medium">
             {navLinks.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                spy={true}
-                smooth={true}
-                offset={-80}
-                duration={500}
-                className="transition-colors hover:text-foreground/80 text-foreground/60 cursor-pointer"
-                activeClass="text-foreground"
-              >
-                {link.label}
-              </Link>
+              // <Link
+              //   key={link.to}
+              //   to={link.to}
+              //   spy={true}
+              //   smooth={true}
+              //   offset={-80}
+              //   duration={500}
+              //   className="transition-colors hover:text-foreground/80 text-foreground/60 cursor-pointer"
+              //   activeClass="text-foreground"
+              // >
+              //   {link.label}
+              // </Link>
+              link.external ? (
+            <a
+              key={link.to}
+              href={link.to}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-foreground/80 text-foreground/60"
+            >
+              {link.label}
+            </a>
+            ) : (
+            <Link
+              key={link.to}
+              to={link.to}
+              spy={true}
+              smooth={true}
+              offset={-80}
+              duration={500}
+              className="transition-colors hover:text-foreground/80 text-foreground/60 cursor-pointer"
+              activeClass="text-foreground"
+            >
+              {link.label}
+            </Link>
             ))}
         </nav>
 
