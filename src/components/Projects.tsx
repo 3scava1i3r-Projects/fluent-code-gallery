@@ -7,6 +7,14 @@ import { Github, ExternalLink, ArrowRight, ArrowLeft } from 'lucide-react';
 
 // Project data updated based on your resume
 const projectData = [
+  
+  {
+    title: 'YYLabs',
+    description: 'A curated collection of lightweight, no-fluff digital tools — from Python automations and AI-powered utilities to clean, modern frontend UI themes — built to help developers, creators, and indie makers move faster.',
+    tags: ['Digital Products', 'Automation', 'AI Tools', 'UI Themes', 'Frontend', 'Python', 'Developer Tools'],
+    github: '#',
+    live: 'https://yylab.gumroad.com/'
+  },
   {
     title: 'Data Ingestion Platform',
     description: 'Engineered and deployed a user interface for a data ingestion platform, significantly increasing lead processing efficiency before on-boarding.',
@@ -55,7 +63,8 @@ const projectData = [
   tags: ['Python', 'Automation', 'Media Kit', 'Screenshots', 'Video', 'Web Tools'],
   github: 'https://github.com/3scava1i3r/media-kit', // Update if you publish the repo
   live: '#', // Replace with actual live/demo URL if available
-  }
+  },
+
   
 ];
 
