@@ -46,9 +46,16 @@ const projectData = [
   title: 'Branded QR Code API',
   description: 'Commercial-grade QR code generation API for scalable, high-quality output with custom branding, logo insertion, color options, vector formats (SVG/PNG), and UPI payment QR support.',
   tags: ['API', 'QR Code', 'Branding', 'SVG', 'UPI', 'Commercial'],
-  github: 'https://github.com/3scava1i3r', // Update if you publish the repo
+  github: 'https://github.com/3scava1i3r/', // Update if you publish the repo
   live: '#', // Replace with actual deployment URL
   },
+  {
+  title: 'Media Kit Generator',
+  description: 'Python tool that auto-generates a media kit from any website by capturing responsive screenshots, a scroll video, and the site logo—saved in a ready-to-use folder.',
+  tags: ['Python', 'Automation', 'Media Kit', 'Screenshots', 'Video', 'Web Tools'],
+  github: 'https://github.com/3scava1i3r/', // Update if you publish the repo
+  live: '#', // Replace with actual live/demo URL if available
+  }
   
 ];
 
