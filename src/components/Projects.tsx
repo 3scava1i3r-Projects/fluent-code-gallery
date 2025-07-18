@@ -53,7 +53,7 @@ const projectData = [
   title: 'Media Kit Generator',
   description: 'Python tool that auto-generates a media kit from any website by capturing responsive screenshots, a scroll video, and the site logo—saved in a ready-to-use folder.',
   tags: ['Python', 'Automation', 'Media Kit', 'Screenshots', 'Video', 'Web Tools'],
-  github: 'https://github.com/3scava1i3r/', // Update if you publish the repo
+  github: 'https://github.com/3scava1i3r/media-kit', // Update if you publish the repo
   live: '#', // Replace with actual live/demo URL if available
   }
   
