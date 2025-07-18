@@ -9,7 +9,7 @@ import { Github, ExternalLink, ArrowRight, ArrowLeft } from 'lucide-react';
 const projectData = [
   
   {
-    title: 'YYLabs',
+    title: 'YY Labs',
     description: 'A curated collection of lightweight, no-fluff digital tools — from Python automations and AI-powered utilities to clean, modern frontend UI themes — built to help developers, creators, and indie makers move faster.',
     tags: ['Digital Products', 'Automation', 'AI Tools', 'UI Themes', 'Frontend', 'Python', 'Developer Tools'],
     github: '#',
