@@ -7,7 +7,27 @@ import { Github, ExternalLink, ArrowRight, ArrowLeft } from 'lucide-react';
 
 // Project data updated based on your resume
 const projectData = [
-  
+  {
+ title: 'AI-Powered PPD Rating Calculator',
+ description: 'HIPAA-compliant SaaS platform for medical professionals to automate Permanent Partial Disability rating calculations. Features AI-powered assessment engine, AMA guideline compliance, automated report generation, and secure subscription management for healthcare providers.',
+ tags: ['Hospital/Healthcare', 'SaaS/Solution', 'Gen AI Service', 'AI/Machine Learning', 'HIPAA Compliance', 'Medical Software', 'Healthcare Technology'],
+ github: '#',
+ live: 'https://ppdcalculator.ai'
+},
+   {
+    title: 'Innoviksha Website',
+    description: 'Official website of Innoviksha, crafted using Vite.js with a fast, responsive design and modern developer experience at its core.',
+    tags: ['Vite', 'Frontend', 'Web Design', 'Performance'],
+    github: 'https://github.com/3scava1i3r', // Update with the actual repo if available
+    live: 'https://innoviksha.xyz',
+  },
+  {
+    title: 'Issue Prioritizer – AI-Driven Task Scoring',
+    description: 'An AI-powered tool that analyzes GitHub issues and ranks them based on urgency, impact, and complexity. Designed for busy dev teams to focus on what matters most, faster.',
+    tags: ['AI', 'GitHub API', 'OpenAI', 'Node.js', 'Automation', 'DevTool'],
+    github: 'https://github.com/3scava1i3r/Berry', // Adjust to match your actual repo URL
+    live: 'https://berry-san.netlify.app', // Add Netlify/Vercel/Render URL if deployed
+  },
   {
     title: 'YY Labs',
     description: 'A curated collection of lightweight, no-fluff digital tools — from Python automations and AI-powered utilities to clean, modern frontend UI themes — built to help developers, creators, and indie makers move faster.',
@@ -35,20 +55,6 @@ const projectData = [
     tags: ['Vite', 'JavaScript', 'Canvas', 'Creative Coding', 'Frontend'],
     github: 'https://github.com/3scava1i3r-projects/debris', // Update if your repo name is different
     live: 'https://debris-sprite.netlify.app/', // Replace with your live link if hosted
-  },
-  {
-    title: 'Issue Prioritizer – AI-Driven Task Scoring',
-    description: 'An AI-powered tool that analyzes GitHub issues and ranks them based on urgency, impact, and complexity. Designed for busy dev teams to focus on what matters most, faster.',
-    tags: ['AI', 'GitHub API', 'OpenAI', 'Node.js', 'Automation', 'DevTool'],
-    github: 'https://github.com/3scava1i3r/Berry', // Adjust to match your actual repo URL
-    live: 'https://berry-san.netlify.app', // Add Netlify/Vercel/Render URL if deployed
-  },
-  {
-    title: 'Innoviksha Website',
-    description: 'Official website of Innoviksha, crafted using Vite.js with a fast, responsive design and modern developer experience at its core.',
-    tags: ['Vite', 'Frontend', 'Web Design', 'Performance'],
-    github: 'https://github.com/3scava1i3r', // Update with the actual repo if available
-    live: 'https://innoviksha.xyz',
   },
   {
   title: 'Branded QR Code API',
