@@ -106,7 +106,7 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Link as ScrollLink } from 'react-scroll';
-import { ArrowRight, Mail, Github, Linkedin, Send, Twitter } from 'lucide-react';
+import { ArrowRight, Mail, Github, Linkedin, Send, Twitter, Calender } from 'lucide-react';
 
 // Import the background component you created
 import { PerlinNoiseBackground } from '@/components/ui/perlin-noise-background';
@@ -115,6 +115,7 @@ import { PerlinNoiseBackground } from '@/components/ui/perlin-noise-background';
 const socialLinks = [
   { name: 'Github', icon: <Github className="h-4 w-4" />, href: 'https://github.com/3scava1i3r' },
   { name: 'LinkedIn', icon: <Linkedin className="h-4 w-4" />, href: 'https://www.linkedin.com/in/hritwikt' },
+  { name: 'Book a Call', icon: <Calender className="h-4 w-4" />, href: 'https://cal.com/hritwikt' },
   {name: 'Email', icon: <Mail className="h-4 w-4" />, href: 'mailto:tripathi.hritwik@gmail.com'},
   { name: 'Twitter', icon: <Twitter className="h-4 w-4" />, href: 'https://twitter.com/0xHritwik' },
   // { name: 'Facebook', icon: <Facebook className="h-4 w-4" />, href: '#' },
