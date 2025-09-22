@@ -71,6 +71,20 @@ const projectData = [
   live: '#', // Replace with actual deployment URL
   },
   {
+  title: 'Decentralized Insurance Platform (NDA Project)',
+  description: 'A blockchain-based insurance proof-of-concept enabling automated cyclone/hurricane coverage with instant wallet payouts. Features included wallet integration, smart contracts, Chainlink oracles, streaming payments, and automated claim verification across EVM-compatible chains.',
+  tags: ['React.js', 'Hardhat', 'Chainlink', 'Superfluid', 'Node.js', 'Web3', 'Polygon', 'Smart Contracts'],
+  github: '', // Private/NDA project, so repo not available
+  live: '',   // Add demo link if allowed
+},
+  {
+  title: 'Fractional NFTs (NDA Project)',
+  description: 'A blockchain platform for fractionalizing high-value NFTs, enabling collective ownership, trading, and governance. Features included secure token issuance, marketplace integration, and multi-chain interoperability.',
+  tags: ['Solidity', 'Rust', 'Ethereum', 'Sidechains', 'React', 'Web3', 'IPFS', 'NFTs'],
+  github: '', // Private/NDA project, no public repo
+  live: '',   // Add demo link if allowed
+},
+  {
   title: 'Media Kit Generator',
   description: 'Python tool that auto-generates a media kit from any website by capturing responsive screenshots, a scroll video, and the site logo—saved in a ready-to-use folder.',
   tags: ['Python', 'Automation', 'Media Kit', 'Screenshots', 'Video', 'Web Tools'],
