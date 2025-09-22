@@ -36,6 +36,13 @@ const projectData = [
     live: 'https://yylab.gumroad.com/'
   },
   {
+  title: 'Vega Blockchain - Chain Data Visualization',
+  description: 'A real-time data visualization tool built for Vega Protocol, showcasing live derivatives trading data from their alpha mainnet using Vega’s public APIs. Features include order book listings, streaming trade events, and interactive market filtering, all aligned with Vega’s branding.',
+  tags: ['JavaScript', 'GraphQL', 'REST', 'WebSockets', 'Data Visualization', 'Blockchain'],
+  github: 'https://github.com/3scava1i3r', // Update with actual repo if available
+  live: '#', // Add live demo link if hosted
+},
+  {
     title: 'Data Ingestion Platform',
     description: 'Engineered and deployed a user interface for a data ingestion platform, significantly increasing lead processing efficiency before on-boarding.',
     tags: ['React', 'UI/UX', 'Data Processing', 'Frontend'],
