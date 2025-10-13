@@ -11,7 +11,7 @@ const workData = [
   {
     dateRange: "2023 - Present",
     duration: "1 year 10 months",
-    company: "Innoviksha LLP",
+    company: "HIE Agency",
     role: "Software Engineer",
     stack: "React & Web3",
     totalMonths: 22,
