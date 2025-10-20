@@ -7,46 +7,88 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-const workData = [
+// Update the calculateDurationFromStart to accept startMonth
+const calculateDurationFromStart = (startYear: number, startMonth: number = 0): { duration: string; totalMonths: number } => {
+  const startDate = new Date(startYear, startMonth, 1); // First day of startMonth
+  const now = new Date();
+  const diffMs = now - startDate;
+  const diffMonths = Math.floor(diffMs / (1000 * 60 * 60 * 24 * 30.4375)); // Average month length
+  const years = Math.floor(diffMonths / 12);
+  const months = diffMonths % 12;
+  const duration = years > 0 ? `${years} year${years > 1 ? 's' : ''} ${months} month${months !== 1 ? 's' : ''}` : `${months} month${months !== 1 ? 's' : ''}`;
+  return { duration, totalMonths: diffMonths };
+};
+
+type Job = {
+  startYear: number;
+  startMonth?: number; // 0-11 for January-December, optional
+  endYear: number | null;
+  company: string;
+  role: string;
+  stack: string;
+  duration?: string;
+  totalMonths?: number;
+};
+
+const workData: Job[] = [
   {
-    dateRange: "2023 - Present",
-    duration: "1 year 10 months",
+    startYear: 2023,
+    startMonth: 7, // August (0=Jan, 1=Feb, ..., 7=Aug)
+    endYear: null,
     company: "HIE Agency",
     role: "Software Engineer",
     stack: "React & Web3",
-    totalMonths: 22,
   },
   {
-    dateRange: "2023",
-    duration: "2 months",
+    startYear: 2023,
+    endYear: 2023,
     company: "Cogoport Pvt Ltd",
     role: "Software Development Engineer",
     stack: "Ruby on Rails, Python",
+    duration: "2 months",
     totalMonths: 2,
   },
   {
-    dateRange: "2023",
-    duration: "5 months",
+    startYear: 2023,
+    endYear: 2023,
     company: "Cogoport Pvt Ltd",
     role: "SDE Intern",
     stack: "Ruby on Rails, Python",
+    duration: "5 months",
     totalMonths: 5,
   },
   {
-    dateRange: "2022",
-    duration: "1 month",
+    startYear: 2022,
+    endYear: 2022,
     company: "Moralis Web3",
     role: "Web3 Frontend Intern",
     stack: "HardHat, ReactJS, TypeScript",
+    duration: "1 month",
     totalMonths: 1,
   },
 ];
 
 const Work = () => {
-  const totalMonths = workData.reduce((acc, job) => acc + job.totalMonths, 0);
+  // Compute all job data dynamically
+  const computedJobs = workData.map((job) => {
+    const isPresent = job.endYear === null;
+    const { duration, totalMonths } = isPresent
+      ? calculateDurationFromStart(job.startYear, job.startMonth || 0)
+      : { duration: job.duration!, totalMonths: job.totalMonths! };
+
+    const dateRange = isPresent
+      ? `${job.startYear} - Present`
+      : job.startYear === job.endYear
+      ? `${job.startYear}`
+      : `${job.startYear} - ${job.endYear!}`;
+
+    return { ...job, computedDateRange: dateRange, computedDuration: duration, computedTotalMonths: totalMonths };
+  });
+
+  const totalMonths = computedJobs.reduce((acc, job) => acc + job.computedTotalMonths, 0);
   const years = Math.floor(totalMonths / 12);
   const months = totalMonths % 12;
-  const totalExperience = `${years} years ${months} months`;
+  const totalExperience = `${years} year${years !== 1 ? 's' : ''} ${months} month${months !== 1 ? 's' : ''}`;
 
   return (
     <section id="work" className="container py-24 sm:py-32">
@@ -64,14 +106,14 @@ const Work = () => {
         <div className="rounded-lg border border-border/40">
           <Table>
             <TableBody>
-              {workData.map((job, index) => (
+              {computedJobs.map((job, index) => (
                 <TableRow
                   key={index}
                   className="hover:bg-muted/20 transition-colors"
                 >
                   <TableCell className="font-mono text-sm text-muted-foreground w-[180px] align-top py-6">
-                    <div>{job.dateRange}</div>
-                    <div className="text-xs mt-1">{job.duration}</div>
+                    <div>{job.computedDateRange}</div>
+                    <div className="text-xs mt-1">{job.computedDuration}</div>
                   </TableCell>
                   <TableCell className="font-semibold text-base align-middle py-6 w-[250px]">
                     {job.company}

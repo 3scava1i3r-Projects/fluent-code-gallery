@@ -15,11 +15,11 @@ const projectData = [
  live: 'https://ppdcalculator.ai'
 },
    {
-    title: 'Innoviksha Website',
-    description: 'Official website of Innoviksha, crafted using Vite.js with a fast, responsive design and modern developer experience at its core.',
+    title: 'HIE Agency Website',
+    description: 'Official website of HIE Agency Website, crafted using Vite.js with a fast, responsive design and modern developer experience at its core.',
     tags: ['Vite', 'Frontend', 'Web Design', 'Performance'],
     github: 'https://github.com/3scava1i3r', // Update with the actual repo if available
-    live: 'https://innoviksha.xyz',
+    live: 'https://hie.agency',
   },
   {
     title: 'Issue Prioritizer – AI-Driven Task Scoring',
