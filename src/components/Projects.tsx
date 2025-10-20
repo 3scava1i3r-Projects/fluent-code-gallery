@@ -149,7 +149,7 @@ const Projects = () => {
             className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth pb-6 -mb-6 space-x-6 lg:space-x-8 scrollbar-hide"
           >
             {projectData.map((project, index) => (
-              <Card key={index} className="flex flex-col w-[90vw] sm:w-[400px] flex-shrink-0 snap-center border-border/60 hover:border-primary/40 transition-colors duration-300">
+              <Card key={index} className="flex flex-col min-h-[400px] w-[90vw] sm:w-[340px] md:w-[380px] lg:w-[400px] xl:w-[450px] max-w-[500px] flex-shrink-0 snap-center border-border/60 hover:border-primary/40 transition-colors duration-300">
                 <CardHeader>
                   <CardTitle className="font-display">{project.title}</CardTitle>
                   <CardDescription>{project.description}</CardDescription>
@@ -177,7 +177,7 @@ const Projects = () => {
             ))}
 
             {/* "Find More" Card */}
-            <Card className="flex flex-col items-center justify-center text-center w-[90vw] sm:w-[400px] flex-shrink-0 snap-center border-border/60 hover:border-primary/40 transition-colors duration-300 bg-card p-6">
+            <Card className="flex flex-col items-center justify-center text-center min-h-[400px] w-[90vw] sm:w-[340px] md:w-[380px] lg:w-[400px] xl:w-[450px] max-w-[500px] flex-shrink-0 snap-center border-border/60 hover:border-primary/40 transition-colors duration-300 bg-card p-6">
               <CardHeader>
                 <CardTitle className="font-display">Explore More</CardTitle>
               </CardHeader>
@@ -222,6 +222,13 @@ const Projects = () => {
                 <ArrowRight className="h-6 w-6" />
               </motion.div>
             </Button>
+          </div>
+
+          {/* Mobile Swipe Hint */}
+          <div className="block lg:hidden mt-6 text-center">
+            <p className="text-muted-foreground/70 text-sm font-medium">
+              ← Swipe to explore projects →
+            </p>
           </div>
         </div>
       </motion.div>

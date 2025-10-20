@@ -223,7 +223,7 @@ const Articles = () => {
                 <PaginationPrevious
                   href="#"
                   onClick={(e) => { e.preventDefault(); handlePageChange(currentPage - 1); }}
-                  className={currentPage === 1 ? 'pointer-events-none opacity-50' : ''}
+                  className={`${currentPage === 1 ? 'pointer-events-none opacity-50' : ''} bg-black text-white hover:bg-gray-900`}
                 />
               </PaginationItem>
               <PaginationItem>
@@ -233,7 +233,7 @@ const Articles = () => {
                 <PaginationNext
                   href="#"
                   onClick={(e) => { e.preventDefault(); handlePageChange(currentPage + 1); }}
-                  className={currentPage === totalPages ? 'pointer-events-none opacity-50' : ''}
+                  className={`${currentPage === totalPages ? 'pointer-events-none opacity-50' : ''} bg-black text-white hover:bg-gray-900`}
                 />
               </PaginationItem>
             </PaginationContent>
