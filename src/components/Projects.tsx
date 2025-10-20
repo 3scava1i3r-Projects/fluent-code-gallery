@@ -92,7 +92,7 @@ const projectData = [
   live: '#', // Replace with actual live/demo URL if available
   },
 
-  
+
 ];
 
 const Projects = () => {
@@ -141,10 +141,10 @@ const Projects = () => {
         viewport={{ once: true }}
       >
         <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl text-center font-display">My Projects</h2>
-        
+
         <div className="relative mt-12">
           {/* Scrollable Area */}
-          <div 
+          <div
             ref={scrollContainerRef}
             className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth pb-6 -mb-6 space-x-6 lg:space-x-8 scrollbar-hide"
           >
@@ -175,7 +175,7 @@ const Projects = () => {
                 </CardFooter>
               </Card>
             ))}
-            
+
             {/* "Find More" Card */}
             <Card className="flex flex-col items-center justify-center text-center w-[90vw] sm:w-[400px] flex-shrink-0 snap-center border-border/60 hover:border-primary/40 transition-colors duration-300 bg-card p-6">
               <CardHeader>
@@ -206,7 +206,9 @@ const Projects = () => {
                 disabled={!canScrollLeft}
                 aria-label="Scroll left"
               >
-              <ArrowLeft className="h-6 w-6" />
+              <motion.div whileTap={{ scale: 0.8, rotate: -10 }}>
+                <ArrowLeft className="h-6 w-6" />
+              </motion.div>
             </Button>
             <Button
                 variant="outline"
@@ -216,7 +218,9 @@ const Projects = () => {
                 disabled={!canScrollRight}
                 aria-label="Scroll right"
             >
-              <ArrowRight className="h-6 w-6" />
+              <motion.div whileTap={{ scale: 0.8, rotate: 10 }}>
+                <ArrowRight className="h-6 w-6" />
+              </motion.div>
             </Button>
           </div>
         </div>

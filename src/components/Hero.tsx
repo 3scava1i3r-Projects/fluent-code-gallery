@@ -152,7 +152,7 @@ const Hero = () => {
             </h1>
             <p className="mt-6 text-lg text-left text-muted-foreground max-w-md">
               My goal is to write maintainable, clean and understandable code to process
-              development was enjoyable.
+              development remains enjoyable.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-3">
               {socialLinks.map((social) => (
@@ -193,7 +193,7 @@ const Hero = () => {
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-xl">
             My goal is to write maintainable, clean and understandable code to process
-            development was enjoyable.
+            development remains enjoyable.
           </p>
           <ScrollLink to="projects" smooth={true} duration={500} offset={-80} className="mt-10">
             <div className="flex items-center gap-x-3">
