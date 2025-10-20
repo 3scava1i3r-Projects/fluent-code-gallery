@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -136,63 +136,80 @@ const Articles = () => {
               </p>
             )}
             {!isLoading && !isError && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                {currentArticles.map((article: Article) => (
-                  <Card
-                    key={article.guid}
-                    className="flex flex-col border-border/60 hover:border-primary/40 transition-colors duration-300 bg-card"
-                  >
-                    <CardHeader>
-                      <CardTitle className="font-display text-xl leading-tight">
-                        <a href={article.link} target="_blank" rel="noopener noreferrer" className="hover:text-primary/80 transition-colors">{article.title}</a>
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="flex-grow">
-                      <p className="text-muted-foreground text-sm">
-                        {createSnippet(article.description)}
-                      </p>
-                    </CardContent>
-                    <CardFooter className="flex justify-between items-center pt-6">
-                      <Button asChild className="rounded-full" variant="default">
-                        <a href={article.link} target="_blank" rel="noopener noreferrer">
-                          Read more
-                        </a>
-                      </Button>
-                      <Button asChild variant="outline" size="icon" className="rounded-full">
-                        <a href={article.link} target="_blank" rel="noopener noreferrer" aria-label={`Read more about ${article.title}`}>
-                          <ArrowRight className="h-4 w-4" />
-                        </a>
-                      </Button>
-                    </CardFooter>
-                  </Card>
-                ))}
-                
-                {/* START: Added "Read More" card */}
-                {isLastPageIncomplete && (
-                  <Card
-                    className="flex flex-col justify-center items-center text-center p-6 border-border/60 hover:border-primary/40 transition-colors duration-300 bg-card"
-                  >
-                    <CardHeader>
-                      <CardTitle className="font-display text-xl leading-tight">
-                        Explore More Articles
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="flex-grow flex items-center">
-                       <p className="text-muted-foreground text-sm">
-                        For more of my work, please visit my Medium profile.
-                      </p>
-                    </CardContent>
-                    <CardFooter className="pt-6">
-                      <Button asChild className="rounded-full" variant="default">
-                        <a href="https://medium.com/@joichiro.sai" target="_blank" rel="noopener noreferrer">
-                          Read on Medium
-                          <ArrowRight className="h-4 w-4 ml-2" />
-                        </a>
-                      </Button>
-                    </CardFooter>
-                  </Card>
-                )}
-                {/* END: Added "Read More" card */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <AnimatePresence mode="wait">
+                  {currentArticles.map((article: Article) => (
+                    <motion.div
+                      key={article.guid}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.8 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <Card
+                        className="flex flex-col border-border/60 hover:border-primary/40 transition-colors duration-300 bg-card"
+                      >
+                        <CardHeader>
+                          <CardTitle className="font-display text-xl leading-tight">
+                            <a href={article.link} target="_blank" rel="noopener noreferrer" className="hover:text-primary/80 transition-colors">{article.title}</a>
+                          </CardTitle>
+                        </CardHeader>
+                        <CardContent className="flex-grow">
+                          <p className="text-muted-foreground text-sm">
+                            {createSnippet(article.description)}
+                          </p>
+                        </CardContent>
+                        <CardFooter className="flex justify-between items-center pt-6">
+                          <Button asChild className="rounded-full" variant="default">
+                            <a href={article.link} target="_blank" rel="noopener noreferrer">
+                              Read more
+                            </a>
+                          </Button>
+                          <Button asChild variant="outline" size="icon" className="rounded-full">
+                            <a href={article.link} target="_blank" rel="noopener noreferrer" aria-label={`Read more about ${article.title}`}>
+                              <ArrowRight className="h-4 w-4" />
+                            </a>
+                          </Button>
+                        </CardFooter>
+                      </Card>
+                    </motion.div>
+                  ))}
+
+                  {/* START: Added "Read More" card */}
+                  {isLastPageIncomplete && (
+                    <motion.div
+                      key="read-more"
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.8 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <Card
+                        className="flex flex-col justify-center items-center text-center p-6 border-border/60 hover:border-primary/40 transition-colors duration-300 bg-card"
+                      >
+                        <CardHeader>
+                          <CardTitle className="font-display text-xl leading-tight">
+                            Explore More Articles
+                          </CardTitle>
+                        </CardHeader>
+                        <CardContent className="flex-grow flex items-center">
+                           <p className="text-muted-foreground text-sm">
+                            For more of my work, please visit my Medium profile.
+                          </p>
+                        </CardContent>
+                        <CardFooter className="pt-6">
+                          <Button asChild className="rounded-full" variant="default">
+                            <a href="https://medium.com/@joichiro.sai" target="_blank" rel="noopener noreferrer">
+                              Read on Medium
+                              <ArrowRight className="h-4 w-4 ml-2" />
+                            </a>
+                          </Button>
+                        </CardFooter>
+                      </Card>
+                    </motion.div>
+                  )}
+                  {/* END: Added "Read More" card */}
+                </AnimatePresence>
               </div>
             )}
           </div>
