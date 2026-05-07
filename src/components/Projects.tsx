@@ -3,16 +3,17 @@ import { motion } from 'framer-motion';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Github, ExternalLink, ArrowRight, ArrowLeft } from 'lucide-react';
+import { Github, ExternalLink, ArrowRight, ArrowLeft, BookOpen } from 'lucide-react';
 
 // Project data updated based on your resume
 const projectData = [
   {
- title: 'AI-Powered PPD Rating Calculator',
- description: 'HIPAA-compliant SaaS platform for medical professionals to automate Permanent Partial Disability rating calculations. Features AI-powered assessment engine, AMA guideline compliance, automated report generation, and secure subscription management for healthcare providers.',
- tags: ['Hospital/Healthcare', 'SaaS/Solution', 'Gen AI Service', 'AI/Machine Learning', 'HIPAA Compliance', 'Medical Software', 'Healthcare Technology'],
- github: '#',
- live: 'https://ppdcalculator.ai'
+  title: 'AI-Powered PPD Rating Calculator',
+  description: 'HIPAA-compliant SaaS platform for medical professionals to automate Permanent Partial Disability rating calculations. Features AI-powered assessment engine, AMA guideline compliance, automated report generation, and secure subscription management for healthcare providers.',
+  tags: ['Hospital/Healthcare', 'SaaS/Solution', 'Gen AI Service', 'AI/Machine Learning', 'HIPAA Compliance', 'Medical Software', 'Healthcare Technology'],
+  github: '#',
+  live: 'https://ppdcalculator.ai',
+  caseStudy: 'https://contra.com'
 },
    {
     title: 'HIE Agency Website',
@@ -20,6 +21,7 @@ const projectData = [
     tags: ['Vite', 'Frontend', 'Web Design', 'Performance'],
     github: 'https://github.com/3scava1i3r', // Update with the actual repo if available
     live: 'https://hie.agency',
+    caseStudy: 'https://contra.com'
   },
   {
     title: 'Issue Prioritizer – AI-Driven Task Scoring',
@@ -27,13 +29,15 @@ const projectData = [
     tags: ['AI', 'GitHub API', 'OpenAI', 'Node.js', 'Automation', 'DevTool'],
     github: 'https://github.com/3scava1i3r/Berry', // Adjust to match your actual repo URL
     live: 'https://berry-san.netlify.app', // Add Netlify/Vercel/Render URL if deployed
+    caseStudy: 'https://contra.com'
   },
   {
     title: 'YY Labs',
     description: 'A curated collection of lightweight, no-fluff digital tools — from Python automations and AI-powered utilities to clean, modern frontend UI themes — built to help developers, creators, and indie makers move faster.',
     tags: ['Digital Products', 'Automation', 'AI Tools', 'UI Themes', 'Frontend', 'Python', 'Developer Tools'],
     github: '#',
-    live: 'https://yylab.gumroad.com/'
+    live: 'https://yylab.gumroad.com/',
+    caseStudy: 'https://contra.com'
   },
   {
   title: 'Vega Blockchain - Chain Data Visualization',
@@ -41,6 +45,7 @@ const projectData = [
   tags: ['JavaScript', 'GraphQL', 'REST', 'WebSockets', 'Data Visualization', 'Blockchain'],
   github: 'https://github.com/3scava1i3r', // Update with actual repo if available
   live: '#', // Add live demo link if hosted
+  caseStudy: 'https://contra.com'
 },
   {
     title: 'Data Ingestion Platform',
@@ -48,6 +53,7 @@ const projectData = [
     tags: ['React', 'UI/UX', 'Data Processing', 'Frontend'],
     github: 'https://github.com/3scava1i3r', // Note: Update with specific repo link if available
     live: '#',
+    caseStudy: 'https://contra.com'
   },
   {
     title: 'Brain Tumor Detection (CNN)',
@@ -55,6 +61,7 @@ const projectData = [
     tags: ['Python', 'TensorFlow', 'Keras', 'AI/ML'],
     github: 'https://github.com/3scava1i3r/Brain-Tumor-Detection-CNN/', // Note: Update with specific repo link if available
     live: '#',
+    caseStudy: 'https://contra.com'
   },
   {
     title: 'Debris – Random Sprite Generator',
@@ -62,6 +69,7 @@ const projectData = [
     tags: ['Vite', 'JavaScript', 'Canvas', 'Creative Coding', 'Frontend'],
     github: 'https://github.com/3scava1i3r-projects/debris', // Update if your repo name is different
     live: 'https://debris-sprite.netlify.app/', // Replace with your live link if hosted
+    caseStudy: 'https://contra.com'
   },
   {
   title: 'Branded QR Code API',
@@ -69,6 +77,7 @@ const projectData = [
   tags: ['API', 'QR Code', 'Branding', 'SVG', 'UPI', 'Commercial'],
   github: 'https://github.com/3scava1i3r/', // Update if you publish the repo
   live: '#', // Replace with actual deployment URL
+  caseStudy: 'https://contra.com'
   },
   {
   title: 'Decentralized Insurance Platform (NDA Project)',
@@ -76,6 +85,7 @@ const projectData = [
   tags: ['React.js', 'Hardhat', 'Chainlink', 'Superfluid', 'Node.js', 'Web3', 'Polygon', 'Smart Contracts'],
   github: '', // Private/NDA project, so repo not available
   live: '',   // Add demo link if allowed
+  caseStudy: 'https://contra.com'
 },
   {
   title: 'Fractional NFTs (NDA Project)',
@@ -83,6 +93,7 @@ const projectData = [
   tags: ['Solidity', 'Rust', 'Ethereum', 'Sidechains', 'React', 'Web3', 'IPFS', 'NFTs'],
   github: '', // Private/NDA project, no public repo
   live: '',   // Add demo link if allowed
+  caseStudy: 'https://contra.com'
 },
   {
   title: 'Media Kit Generator',
@@ -90,6 +101,86 @@ const projectData = [
   tags: ['Python', 'Automation', 'Media Kit', 'Screenshots', 'Video', 'Web Tools'],
   github: 'https://github.com/3scava1i3r/media-kit', // Update if you publish the repo
   live: '#', // Replace with actual live/demo URL if available
+  },
+  {
+    title: 'KEKW Arcade 🐸',
+    description: 'DeFiSummer Hackathon 2021 Winner - NFT Meme Marketplace Prize. Built a retro NES-style meme NFT marketplace in 48 hours with Imgflip API integration, meme generator, wallet connection, and pixel-art gaming UI. Tech Stack: React • TypeScript • Tailwind • shadcn-ui • Vitest.',
+    tags: ['React', 'TypeScript', 'Web3', 'NFT', 'Hackathon', 'DeFi', 'Blockchain'],
+    github: '#',
+    live: 'https://kekw.hie.agency/',
+    caseStudy: 'https://contra.com'
+  },
+  {
+    title: 'Mask x mStable Chrome Extension Integration',
+    description: 'UI/UX design for integrating mStable savings protocol into Mask Network\'s browser extension, enabling users to earn yield on mUSD directly within social platforms like Twitter and Facebook. Delivered interactive prototypes, design system, and multi-protocol DeFi aggregation framework.',
+    tags: ['UI/UX Design', 'DeFi', 'Ethereum', 'Figma', 'Cryptocurrency', 'Blockchain', 'Mask Network'],
+    github: '#',
+    live: '#',
+    caseStudy: 'https://contra.com'
+  },
+  {
+    title: 'Zero to 500 DAOs: Building Sismo\'s Governance Layer',
+    description: 'Full-stack integration of Tally as a data provider for Sismo Protocol, connecting governance data from 500+ DAOs to enable privacy-preserving reputation badges. Saved Sismo $6,000-$16,000 in costs and 2-3 weeks of development time while unlocking new revenue opportunities in DAO-focused products.',
+    tags: ['Fullstack Engineer', 'TypeScript', 'Web3', 'DAO Governance', 'Zero-Knowledge Proofs', 'Sismo'],
+    github: 'https://github.com/sismo-core/sismo-hub',
+    live: '#',
+    caseStudy: 'https://contra.com'
+  },
+  {
+    title: 'Powering $2M+ TVL: Real-Time NFT20 Protocol Data with Subgraph',
+    description: 'Built a custom Subgraph for NFT20 protocol, indexing NFT trades, swaps, and liquidity pool data for real-time access via GraphQL. Enabled developers to build NFT apps and dashboards, enhancing ecosystem adoption for the $2M+ TVL protocol.',
+    tags: ['Blockchain Developer', 'Backend Engineer', 'GraphQL', 'TypeScript', 'Cryptocurrency', 'Blockchain'],
+    github: '#',
+    live: '#',
+    caseStudy: 'https://contra.com'
+  },
+  {
+    title: 'TurboEth: Accelerating Web3 Growth with Privacy & Scalability',
+    description: 'Enhanced TurboEth with IPFS decentralized storage via Web3.storage and zero-knowledge identity verification using Sismo. Enabled censorship-resistant applications, privacy-focused identity flows, and faster development cycles for Web3 startups.',
+    tags: ['Blockchain Developer', 'Frontend Engineer', 'Fullstack Engineer', 'MetaMask', 'Next.js', 'Supabase', 'Cryptocurrency', 'Blockchain'],
+    github: '#',
+    live: '#',
+    caseStudy: 'https://contra.com'
+  },
+  {
+    title: 'Building Web3UIKit Components to Reduce Web3 Dev Time',
+    description: 'Contributed six critical UI components to Moralis Web3UIKit, including ENSAvatar, BlockNumber, ENS Support in ConnectButton, IPFSInput, Slider, and Crypto Exchange Logo Updates. Accelerated dApp development across multiple blockchain networks.',
+    tags: ['Frontend Engineer', 'UX Engineer', 'React', 'Storybook', 'Cryptocurrency', 'Blockchain'],
+    github: '#',
+    live: '#',
+    caseStudy: 'https://contra.com'
+  },
+  {
+    title: 'Smart Contract Audit: Protecting $35M TVL from Slippage Losses',
+    description: 'Conducted an internal smart contract audit that identified and fixed a high-severity slippage risk in DeFi liquidity vault contracts. Implemented slippage protection and execution time buffers to prevent capital losses from adverse AMM price movements.',
+    tags: ['Security Engineer', 'Solidity Engineer', 'Remix IDE', 'Solidity', 'TypeScript', 'Cryptocurrency', 'Blockchain'],
+    github: '#',
+    live: '#',
+    caseStudy: 'https://contra.com'
+  },
+  {
+    title: 'Driving Instruction Company Landing Page',
+    description: 'Designed and developed a professional landing page for a driving instruction company using Framer, focusing on user-friendly navigation and conversion optimization.',
+    tags: ['Web Design', 'Framer', 'Landing Page'],
+    github: '#',
+    live: '#',
+    caseStudy: '#'
+  },
+  {
+    title: 'Interior Designer Portfolio Website',
+    description: 'Created a portfolio landing page for an interior designer who worked on the Netflix office in Nagpur, built with Framer to showcase design expertise and projects.',
+    tags: ['Web Design', 'Framer', 'Portfolio', 'Interior Design'],
+    github: '#',
+    live: '#',
+    caseStudy: '#'
+  },
+  {
+    title: 'Never Miss a Moment',
+    description: 'Instantly capture stream highlights with a simple chat command. Your personal clipping assistant is here.',
+    tags: ['Streaming', 'Clipping', 'Chat Bot', 'Automation'],
+    github: '#',
+    live: 'https://snipeme.xyz',
+    caseStudy: '#'
   },
 
 
@@ -162,16 +253,27 @@ const Projects = () => {
                   </div>
                 </CardContent>
                 <CardFooter className="flex justify-end gap-x-4">
-                  <Button variant="outline" asChild>
-                    <a href={project.github} target="_blank" rel="noopener noreferrer">
-                      <Github className="mr-2 h-4 w-4" /> GitHub
-                    </a>
-                  </Button>
-                  <Button asChild>
-                    <a href={project.live} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
-                    </a>
-                  </Button>
+                  {project.github !== '#' && project.github !== '' && (
+                    <Button variant="outline" asChild>
+                      <a href={project.github} target="_blank" rel="noopener noreferrer">
+                        <Github className="mr-2 h-4 w-4" /> GitHub
+                      </a>
+                    </Button>
+                  )}
+                  {project.live !== '#' && project.live !== '' && (
+                    <Button variant="outline" asChild>
+                      <a href={project.live} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
+                      </a>
+                    </Button>
+                  )}
+                  {project.caseStudy !== '#' && project.caseStudy !== '' && (
+                    <Button variant="outline" asChild>
+                      <a href={project.caseStudy} target="_blank" rel="noopener noreferrer">
+                        <BookOpen className="mr-2 h-4 w-4" /> Case Study
+                      </a>
+                    </Button>
+                  )}
                 </CardFooter>
               </Card>
             ))}
