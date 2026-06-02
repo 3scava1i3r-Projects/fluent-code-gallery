@@ -308,7 +308,7 @@ const Projects = () => {
                   
                 </Button>
                 <Button asChild className="w-full">
-                  <a href="https://github.com/3scava1i3r-Projects" target="_blank" rel="noopener noreferrer">
+                  <a href="https://contra.com/hritwikt/work?r=hritwikt" target="_blank" rel="noopener noreferrer">
                     <ContrastIcon className="mr-2 h-4 w-4" /> Contra
                   </a>
                   
