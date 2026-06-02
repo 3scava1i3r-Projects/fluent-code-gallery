@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Github, ExternalLink, ArrowRight, ArrowLeft, BookOpen } from 'lucide-react';
+import { Github, ExternalLink, ArrowRight, ArrowLeft, BookOpen, ContrastIcon } from 'lucide-react';
 
 // Project data updated based on your resume
 const projectData = [
@@ -11,26 +11,26 @@ const projectData = [
   title: 'AI-Powered PPD Rating Calculator',
   description: 'HIPAA-compliant SaaS platform for medical professionals to automate Permanent Partial Disability rating calculations. Features AI-powered assessment engine, AMA guideline compliance, automated report generation, and secure subscription management for healthcare providers.',
   tags: ['Hospital/Healthcare', 'SaaS/Solution', 'Gen AI Service', 'AI/Machine Learning', 'HIPAA Compliance', 'Medical Software', 'Healthcare Technology'],
-  github: '#',
+  github: '',
   live: 'https://ppdcalculator.ai',
-  caseStudy: 'https://contra.com'
+  caseStudy: 'https://contra.com/p/cNFlFgoN-ppd-calculator?referralExperimentNid=DEFAULT_REFERRAL_PROGRAM&referrerUsername=hritwikt'
  },
     {
      title: 'HIE Agency Website',
      description: 'Official website of HIE Agency Website, crafted using Vite.js with a fast, responsive design and modern developer experience at its core.',
      tags: ['Vite', 'Frontend', 'Web Design', 'Performance'],
-     github: 'https://github.com/3scava1i3r', // Update with the actual repo if available
+     github: '', // Update with the actual repo if available
      live: 'https://hie.agency',
-     caseStudy: 'https://contra.com'
+     caseStudy: 'https://contra.com/p/qQsRggNO-hie-agency-website-development?referralExperimentNid=DEFAULT_REFERRAL_PROGRAM&referrerUsername=hritwikt'
   },
   
      {
   title: 'Vega Blockchain - Chain Data Visualization',
   description: 'A real-time data visualization tool built for Vega Protocol, showcasing live derivatives trading data from their alpha mainnet using Vega’s public APIs. Features include order book listings, streaming trade events, and interactive market filtering, all aligned with Vega’s branding.',
   tags: ['JavaScript', 'GraphQL', 'REST', 'WebSockets', 'Data Visualization', 'Blockchain'],
-  github: 'https://github.com/3scava1i3r', // Update with actual repo if available
-  live: '#', // Add live demo link if hosted
-  caseStudy: 'https://contra.com'
+  github: '', // Update with actual repo if available
+  live: 'https://vega.hie.agency', // Add live demo link if hosted
+  caseStudy: 'https://contra.com/p/qFXPlX2O-vega-blockchain-data-visualization?referralExperimentNid=DEFAULT_REFERRAL_PROGRAM&referrerUsername=hritwikt'
  },
      {
      title: 'Smart Contract Audit: Protecting $35M TVL from Slippage Losses',
@@ -38,7 +38,7 @@ const projectData = [
      tags: ['Security Engineer', 'Solidity Engineer', 'Remix IDE', 'Solidity', 'TypeScript', 'Cryptocurrency', 'Blockchain'],
      github: '#',
      live: '#',
-     caseStudy: 'https://contra.com'
+     caseStudy: 'https://contra.com/p/ZqW6NPmb-smart-contract-audit-protecting-dollar35-m-tvl-from-slippage-losses?referralExperimentNid=DEFAULT_REFERRAL_PROGRAM&referrerUsername=hritwikt'
   },
      {
      title: 'Mask x mStable Chrome Extension Integration',
@@ -46,15 +46,15 @@ const projectData = [
      tags: ['UI/UX Design', 'DeFi', 'Ethereum', 'Figma', 'Cryptocurrency', 'Blockchain', 'Mask Network'],
      github: '#',
      live: '#',
-     caseStudy: 'https://contra.com'
+     caseStudy: 'https://contra.com/p/Mqg3kZqW-mask-x-m-stable-chrome-extension-integration?referralExperimentNid=DEFAULT_REFERRAL_PROGRAM&referrerUsername=hritwikt'
   },
   {
      title: 'Zero to 500 DAOs: Building Sismo\'s Governance Layer',
      description: 'Full-stack integration of Tally as a data provider for Sismo Protocol, connecting governance data from 500+ DAOs to enable privacy-preserving reputation badges. Saved Sismo $6,000-$16,000 in costs and 2-3 weeks of development time while unlocking new revenue opportunities in DAO-focused products.',
      tags: ['Fullstack Engineer', 'TypeScript', 'Web3', 'DAO Governance', 'Zero-Knowledge Proofs', 'Sismo'],
-     github: 'https://github.com/sismo-core/sismo-hub',
+     github: '',
      live: '#',
-     caseStudy: 'https://contra.com'
+     caseStudy: 'https://contra.com/p/o2F6RAUO-zero-to-500-da-os-building-sismos-governance-layer?referralExperimentNid=DEFAULT_REFERRAL_PROGRAM&referrerUsername=hritwikt'
   },
   {
      title: 'Powering $2M+ TVL: Real-Time NFT20 Protocol Data with Subgraph',
@@ -62,7 +62,7 @@ const projectData = [
      tags: ['Blockchain Developer', 'Backend Engineer', 'GraphQL', 'TypeScript', 'Cryptocurrency', 'Blockchain'],
      github: '#',
      live: '#',
-     caseStudy: 'https://contra.com'
+     caseStudy: 'https://contra.com/p/g3UBL2bN-powering-dollar2-m-tvl-real-time-nft20-protocol-data-with-subgraph'
   },
   {
      title: 'TurboEth: Accelerating Web3 Growth with Privacy & Scalability',
@@ -70,31 +70,31 @@ const projectData = [
      tags: ['Blockchain Developer', 'Frontend Engineer', 'Fullstack Engineer', 'MetaMask', 'Next.js', 'Supabase', 'Cryptocurrency', 'Blockchain'],
      github: '#',
      live: '#',
-     caseStudy: 'https://contra.com'
+     caseStudy: 'https://contra.com/p/AeEgPkMr-turbo-eth-accelerating-web3-growth-with-privacy-and-scalability'
   },
-     {
-     title: 'Driving Instruction Company Landing Page',
-     description: 'Designed and developed a professional landing page for a driving instruction company using Framer, focusing on user-friendly navigation and conversion optimization.',
-     tags: ['Web Design', 'Framer', 'Landing Page'],
-     github: '#',
-     live: '#',
-     caseStudy: '#'
-  },
-  {
-     title: 'Interior Designer Portfolio Website',
-     description: 'Created a portfolio landing page for an interior designer who worked on the Netflix office in Nagpur, built with Framer to showcase design expertise and projects.',
-     tags: ['Web Design', 'Framer', 'Portfolio', 'Interior Design'],
-     github: '#',
-     live: '#',
-     caseStudy: '#'
-  },
+  //    {
+  //    title: 'Driving Instruction Company Landing Page',
+  //    description: 'Designed and developed a professional landing page for a driving instruction company using Framer, focusing on user-friendly navigation and conversion optimization.',
+  //    tags: ['Web Design', 'Framer', 'Landing Page'],
+  //    github: '#',
+  //    live: '#',
+  //    caseStudy: ''
+  // },
+  // {
+  //    title: 'Interior Designer Portfolio Website',
+  //    description: 'Created a portfolio landing page for an interior designer who worked on the Netflix office in Nagpur, built with Framer to showcase design expertise and projects.',
+  //    tags: ['Web Design', 'Framer', 'Portfolio', 'Interior Design'],
+  //    github: '#',
+  //    live: '#',
+  //    caseStudy: '#'
+  // },
   {
      title: 'Never Miss a Moment',
      description: 'Instantly capture stream highlights with a simple chat command. Your personal clipping assistant is here.',
      tags: ['Streaming', 'Clipping', 'Chat Bot', 'Automation'],
      github: '#',
      live: 'https://snipeme.xyz',
-     caseStudy: '#'
+     caseStudy: 'https://contra.com/p/L32Lcr6m-snipe-me-clipping-tool-development'
   },
   {
      title: 'YY Labs',
@@ -102,70 +102,56 @@ const projectData = [
      tags: ['Digital Products', 'Automation', 'AI Tools', 'UI Themes', 'Frontend', 'Python', 'Developer Tools'],
      github: '#',
      live: 'https://yylab.gumroad.com/',
-     caseStudy: 'https://contra.com'
+     caseStudy: ''
   },
   {
      title: 'Data Ingestion Platform',
      description: 'Engineered and deployed a user interface for a data ingestion platform, significantly increasing lead processing efficiency before on-boarding.',
      tags: ['React', 'UI/UX', 'Data Processing', 'Frontend'],
-     github: 'https://github.com/3scava1i3r', // Note: Update with specific repo link if available
+     github: '', // Note: Update with specific repo link if available
      live: '#',
-     caseStudy: 'https://contra.com'
+     caseStudy: ''
   },
-  {
-     title: 'Brain Tumor Detection (CNN)',
-     description: 'Developed a Convolutional Neural Network algorithm to analyze MRI images, achieving 96% accuracy in identifying brain tumors.',
-     tags: ['Python', 'TensorFlow', 'Keras', 'AI/ML'],
-     github: 'https://github.com/3scava1i3r/Brain-Tumor-Detection-CNN/', // Note: Update with specific repo link if available
-     live: '#',
-     caseStudy: 'https://contra.com'
-  },
+  // {
+  //    title: 'Brain Tumor Detection (CNN)',
+  //    description: 'Developed a Convolutional Neural Network algorithm to analyze MRI images, achieving 96% accuracy in identifying brain tumors.',
+  //    tags: ['Python', 'TensorFlow', 'Keras', 'AI/ML'],
+  //    github: 'https://github.com/3scava1i3r/Brain-Tumor-Detection-CNN/', // Note: Update with specific repo link if available
+  //    live: '#',
+  //    caseStudy: ''
+  // },
   {
      title: 'Debris – Random Sprite Generator',
      description: 'A lightweight Vite-powered web app that generates random sprites using pixel art logic. Ideal for game developers and NFT creators seeking unique visual assets.',
      tags: ['Vite', 'JavaScript', 'Canvas', 'Creative Coding', 'Frontend'],
      github: 'https://github.com/3scava1i3r-projects/debris', // Update if your repo name is different
      live: 'https://debris-sprite.netlify.app/', // Replace with your live link if hosted
-     caseStudy: 'https://contra.com'
+     caseStudy: ''
   },
-  {
-  title: 'Branded QR Code API',
-  description: 'Commercial-grade QR code generation API for scalable, high-quality output with custom branding, logo insertion, color options, vector formats (SVG/PNG), and UPI payment QR support.',
-  tags: ['API', 'QR Code', 'Branding', 'SVG', 'UPI', 'Commercial'],
-  github: 'https://github.com/3scava1i3r/', // Update if you publish the repo
-  live: '#', // Replace with actual deployment URL
-  caseStudy: 'https://contra.com'
-  },
-  {
-  title: 'Decentralized Insurance Platform (NDA Project)',
-  description: 'A blockchain-based insurance proof-of-concept enabling automated cyclone/hurricane coverage with instant wallet payouts. Features included wallet integration, smart contracts, Chainlink oracles, streaming payments, and automated claim verification across EVM-compatible chains.',
-  tags: ['React.js', 'Hardhat', 'Chainlink', 'Superfluid', 'Node.js', 'Web3', 'Polygon', 'Smart Contracts'],
-  github: '', // Private/NDA project, so repo not available
-  live: '',   // Add demo link if allowed
-  caseStudy: 'https://contra.com'
- },
-  {
-  title: 'Fractional NFTs (NDA Project)',
-  description: 'A blockchain platform for fractionalizing high-value NFTs, enabling collective ownership, trading, and governance. Features included secure token issuance, marketplace integration, and multi-chain interoperability.',
-  tags: ['Solidity', 'Rust', 'Ethereum', 'Sidechains', 'React', 'Web3', 'IPFS', 'NFTs'],
-  github: '', // Private/NDA project, no public repo
-  live: '',   // Add demo link if allowed
-  caseStudy: 'https://contra.com'
- },
+  // {
+  // title: 'Branded QR Code API',
+  // description: 'Commercial-grade QR code generation API for scalable, high-quality output with custom branding, logo insertion, color options, vector formats (SVG/PNG), and UPI payment QR support.',
+  // tags: ['API', 'QR Code', 'Branding', 'SVG', 'UPI', 'Commercial'],
+  // github: 'https://github.com/3scava1i3r/', // Update if you publish the repo
+  // live: '#', // Replace with actual deployment URL
+  // caseStudy: 'https://contra.com'
+  // },
+
  {
      title: 'Issue Prioritizer – AI-Driven Task Scoring',
      description: 'An AI-powered tool that analyzes GitHub issues and ranks them based on urgency, impact, and complexity. Designed for busy dev teams to focus on what matters most, faster.',
      tags: ['AI', 'GitHub API', 'OpenAI', 'Node.js', 'Automation', 'DevTool'],
      github: 'https://github.com/3scava1i3r/Berry', // Adjust to match your actual repo URL
      live: 'https://berry-san.netlify.app', // Add Netlify/Vercel/Render URL if deployed
-     caseStudy: 'https://contra.com'
+     caseStudy: ''
   },
   {
   title: 'Media Kit Generator',
   description: 'Python tool that auto-generates a media kit from any website by capturing responsive screenshots, a scroll video, and the site logo—saved in a ready-to-use folder.',
   tags: ['Python', 'Automation', 'Media Kit', 'Screenshots', 'Video', 'Web Tools'],
   github: 'https://github.com/3scava1i3r/media-kit', // Update if you publish the repo
-  live: '#', // Replace with actual live/demo URL if available
+  live: '#',
+  caseStudy: ''
   },
   {
      title: 'KEKW Arcade 🐸',
@@ -173,7 +159,7 @@ const projectData = [
      tags: ['React', 'TypeScript', 'Web3', 'NFT', 'Hackathon', 'DeFi', 'Blockchain'],
      github: '#',
      live: 'https://kekw.hie.agency/',
-     caseStudy: 'https://contra.com'
+     caseStudy: 'https://contra.com/p/P3ErN2XA-kekw-arcade-de-fi-summer-2021-winner'
   },
 
   {
@@ -182,10 +168,33 @@ const projectData = [
      tags: ['Frontend Engineer', 'UX Engineer', 'React', 'Storybook', 'Cryptocurrency', 'Blockchain'],
      github: '#',
      live: '#',
-     caseStudy: 'https://contra.com'
+     caseStudy: 'https://contra.com/p/7l2ROEb3-building-web3-ui-kit-components-to-reduce-web3-dev-time'
   },
-
-
+  {
+     title: 'Sahyogi - Hack-a-Solution Hackathon Winner',
+     description: 'Recognized for innovative solutions during the Sahyogi Hack-a-Solution Hackathon, showcasing problem-solving skills and technical expertise.',
+     tags: ['Hackathon', 'Innovation', 'Problem Solving'],
+     github: '#',
+     live: '#',
+     caseStudy: 'https://contra.com/p/NgWP3qZE-sahyogi-hack-a-solution-hackathon-winner?r=hritwikt'
+  }
+,
+    {
+  title: 'Decentralized Insurance Platform (NDA Project)',
+  description: 'A blockchain-based insurance proof-of-concept enabling automated cyclone/hurricane coverage with instant wallet payouts. Features included wallet integration, smart contracts, Chainlink oracles, streaming payments, and automated claim verification across EVM-compatible chains.',
+  tags: ['React.js', 'Hardhat', 'Chainlink', 'Superfluid', 'Node.js', 'Web3', 'Polygon', 'Smart Contracts'],
+  github: '', // Private/NDA project, so repo not available
+  live: '',   // Add demo link if allowed
+  caseStudy: ''
+ },
+  {
+  title: 'Fractional NFTs (NDA Project)',
+  description: 'A blockchain platform for fractionalizing high-value NFTs, enabling collective ownership, trading, and governance. Features included secure token issuance, marketplace integration, and multi-chain interoperability.',
+  tags: ['Solidity', 'Rust', 'Ethereum', 'Sidechains', 'React', 'Web3', 'IPFS', 'NFTs'],
+  github: '', // Private/NDA project, no public repo
+  live: '',   // Add demo link if allowed
+  caseStudy: ''
+ },
 
  ];
 
@@ -291,11 +300,18 @@ const Projects = () => {
                   Discover a wider range of my work, experiments, and contributions on GitHub.
                 </p>
               </CardContent>
-              <CardFooter>
+              <CardFooter className="flex-col gap-2">
                  <Button asChild className="w-full">
                   <a href="https://github.com/3scava1i3r-Projects" target="_blank" rel="noopener noreferrer">
                     <Github className="mr-2 h-4 w-4" /> View All Projects
                   </a>
+                  
+                </Button>
+                <Button asChild className="w-full">
+                  <a href="https://github.com/3scava1i3r-Projects" target="_blank" rel="noopener noreferrer">
+                    <ContrastIcon className="mr-2 h-4 w-4" /> Contra
+                  </a>
+                  
                 </Button>
               </CardFooter>
             </Card>
